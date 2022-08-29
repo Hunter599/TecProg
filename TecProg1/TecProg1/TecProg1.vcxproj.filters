@@ -15,40 +15,46 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="aluno.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="departamento.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="disciplina.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pessoa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="principal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="universidade.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="aluno.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="departamento.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pessoa.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="principal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="TecProg1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Projects(C++)\TP\departamento.cpp">
+    <ClCompile Include="universidade.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Projects(C++)\TP\pessoa.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Projects(C++)\TP\principal.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\Projects(C++)\TP\universidade.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\Projects(C++)\TP\main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="D:\Projects(C++)\TP\departamento.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects(C++)\TP\disciplina.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects(C++)\TP\pessoa.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects(C++)\TP\principal.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projects(C++)\TP\universidade.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

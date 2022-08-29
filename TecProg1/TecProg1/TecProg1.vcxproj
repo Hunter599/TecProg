@@ -151,19 +151,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="D:\Projects(C++)\TP\departamento.cpp" />
-    <ClCompile Include="D:\Projects(C++)\TP\main.cpp" />
-    <ClCompile Include="D:\Projects(C++)\TP\pessoa.cpp" />
-    <ClCompile Include="D:\Projects(C++)\TP\principal.cpp" />
-    <ClCompile Include="D:\Projects(C++)\TP\universidade.cpp" />
-    <ClCompile Include="TecProg1.cpp" />
+    <ClInclude Include="aluno.h" />
+    <ClInclude Include="departamento.h" />
+    <ClInclude Include="disciplina.h" />
+    <ClInclude Include="pessoa.h" />
+    <ClInclude Include="principal.h" />
+    <ClInclude Include="universidade.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="D:\Projects(C++)\TP\departamento.h" />
-    <ClInclude Include="D:\Projects(C++)\TP\disciplina.h" />
-    <ClInclude Include="D:\Projects(C++)\TP\pessoa.h" />
-    <ClInclude Include="D:\Projects(C++)\TP\principal.h" />
-    <ClInclude Include="D:\Projects(C++)\TP\universidade.h" />
+    <ClCompile Include="aluno.cpp" />
+    <ClCompile Include="departamento.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="pessoa.cpp" />
+    <ClCompile Include="principal.cpp" />
+    <ClCompile Include="TecProg1.cpp" />
+    <ClCompile Include="universidade.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
