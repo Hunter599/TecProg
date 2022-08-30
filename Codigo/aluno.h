@@ -9,8 +9,8 @@ private:
 
 public:
 
-	Aluno(int diaNa, int mesNa, int anoNa, char* na = (char*)"");
-	Aluno(int i);
+	Aluno(int diaNa, int mesNa, int anoNa, char* na = (char*)"", int ra =-1);
+	Aluno();
 	~Aluno();
 
 	void setRa(int num);

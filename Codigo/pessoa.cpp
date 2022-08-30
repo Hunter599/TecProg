@@ -16,14 +16,14 @@ void Pessoa::inicializa(int dp, int mp, int ap,  char* np){
     anoP= ap;
     idade = -1;
     strcpy_s(nome,np);
-    uni = NULL;
-	dep = NULL;
 }
 
-Pessoa::Pessoa()
+Pessoa::Pessoa(int diaNa, int mesNa, int anoNa, char* na)
 {
-    inicializa(0,0,0);
+	inicializa(diaNa, mesNa, anoNa, na);
 }
+
+Pessoa::Pessoa(){}
 
 Pessoa::~Pessoa(){}
 
@@ -53,19 +53,6 @@ int Pessoa::informaIdade()
 void Pessoa::showIdade()
 {
     cout << "A idade de "<< nome << " seria " << idade << " anos"<< endl;
-}
-
-void Pessoa::setUniAfil(Universidade *u){
-    uni = u;
-}
-
-void Pessoa::setDepAfil(Departamento* d) {
-	dep = d;
-}
-
-char* Pessoa::trabalha(){
-    return uni->getNome();
-
 }
 
 

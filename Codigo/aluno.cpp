@@ -1,13 +1,14 @@
 #include "aluno.h"
 #include <string.h>
 
-Aluno::Aluno(int diaNa, int mesNa, int anoNa, char* na) :
+Aluno::Aluno(int diaNa, int mesNa, int anoNa, char* na, int ra):
+	Pessoa()
 {
-	Aluno::inicializa(diaNa, mesNa, anoNa, na);
-	Aluno::setRa(-1);
+	inicializa(diaNa, mesNa, anoNa, na);
+	setRa(ra);
 }
 
-Aluno::Aluno(int i) 
+Aluno::Aluno() 
 {
 }
 

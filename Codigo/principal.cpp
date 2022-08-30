@@ -62,8 +62,8 @@ void Principal::executar(){
     Einstein.calcIdade(diaAtual,mesAtual,anoAtual);
     Newton.calcIdade(diaAtual,mesAtual,anoAtual);
 
-    Einstein.trabalha();
-    Newton.trabalha();
+    Einstein.trabalhaUni();
+    Newton.trabalhaUni();
 
     Einstein.showIdade();
     Newton.showIdade();

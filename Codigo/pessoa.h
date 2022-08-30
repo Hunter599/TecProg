@@ -2,8 +2,7 @@
 #define _PESSOA_H_
 
 
-#include "universidade.h"
-#include "departamento.h"
+
 class Pessoa
 {
     //ATRIBUTOS - ATTRIBUTES
@@ -13,13 +12,12 @@ private:
     int anoP;
     int idade;
     char nome[30];
-    Universidade *uni;
-    Departamento *dep;
+  
 
 
     //METODOS - METHODS
 public:
-
+	Pessoa(int diaNa, int mesNa, int anoNa, char* na = (char*)"");
     Pessoa();
     ~Pessoa();
 
@@ -29,9 +27,7 @@ public:
     void showIdade();
     int informaIdade();
 
-    void setUniAfil(Universidade *u);
-	void setDepAfil(Departamento *d);
-    char* trabalha();
+    
 
     
 

@@ -151,21 +151,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="aluno.h" />
-    <ClInclude Include="departamento.h" />
-    <ClInclude Include="disciplina.h" />
-    <ClInclude Include="pessoa.h" />
-    <ClInclude Include="principal.h" />
-    <ClInclude Include="universidade.h" />
+    <ClCompile Include="..\..\Codigo\aluno.cpp" />
+    <ClCompile Include="..\..\Codigo\departamento.cpp" />
+    <ClCompile Include="..\..\Codigo\main.cpp" />
+    <ClCompile Include="..\..\Codigo\pessoa.cpp" />
+    <ClCompile Include="..\..\Codigo\principal.cpp" />
+    <ClCompile Include="..\..\Codigo\professor.cpp" />
+    <ClCompile Include="..\..\Codigo\universidade.cpp" />
+    <ClCompile Include="TecProg1.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="aluno.cpp" />
-    <ClCompile Include="departamento.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="pessoa.cpp" />
-    <ClCompile Include="principal.cpp" />
-    <ClCompile Include="TecProg1.cpp" />
-    <ClCompile Include="universidade.cpp" />
+    <ClInclude Include="..\..\Codigo\aluno.h" />
+    <ClInclude Include="..\..\Codigo\departamento.h" />
+    <ClInclude Include="..\..\Codigo\disciplina.h" />
+    <ClInclude Include="..\..\Codigo\pessoa.h" />
+    <ClInclude Include="..\..\Codigo\principal.h" />
+    <ClInclude Include="..\..\Codigo\professor.h" />
+    <ClInclude Include="..\..\Codigo\universidade.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

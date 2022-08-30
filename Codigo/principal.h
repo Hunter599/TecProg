@@ -2,12 +2,13 @@
 #include "pessoa.h"
 #include "universidade.h"
 #include "departamento.h"
+#include "professor.h"
 
 class Principal{
 
 private:
-    Pessoa Einstein;
-    Pessoa Newton;
+    Professor Einstein;
+	Professor Newton;
 
     Universidade UTFPR;
     Universidade Cambridge;
