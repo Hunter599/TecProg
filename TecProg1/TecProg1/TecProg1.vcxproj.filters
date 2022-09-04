@@ -39,6 +39,9 @@
     <ClCompile Include="..\..\Codigo\professor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Codigo\disciplina.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Codigo\aluno.h">
@@ -50,9 +53,6 @@
     <ClInclude Include="..\..\Codigo\disciplina.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Codigo\pessoa.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Codigo\principal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -60,6 +60,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Codigo\universidade.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Codigo\pessoa.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

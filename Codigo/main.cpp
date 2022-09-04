@@ -14,6 +14,8 @@ int main(){
 
     Principal objetoPrincipal;
 
+	objetoPrincipal.inicializaAlunos();
+	objetoPrincipal.inicializaProfessores();
     objetoPrincipal.executar();
 
     return 0;

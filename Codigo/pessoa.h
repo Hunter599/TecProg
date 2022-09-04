@@ -13,6 +13,7 @@ private:
     int idade;
     char nome[30];
   
+	
 
 
     //METODOS - METHODS
@@ -26,6 +27,9 @@ public:
     void calcIdade(int d, int m, int a);
     void showIdade();
     int informaIdade();
+
+	char* getNome();
+
 
     
 

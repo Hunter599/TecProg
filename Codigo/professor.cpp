@@ -3,8 +3,8 @@
 Professor::Professor(int diaNa, int mesNa, int anoNa, char* na)
 {
 	Pessoa(diaNa, mesNa, anoNa, na);
-	uni = NULL;
-	dep = NULL;
+	//uni = NULL;
+	//dep = NULL;
 }
 
 Professor::Professor() {}

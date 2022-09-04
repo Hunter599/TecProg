@@ -55,5 +55,9 @@ void Pessoa::showIdade()
     cout << "A idade de "<< nome << " seria " << idade << " anos"<< endl;
 }
 
+char* Pessoa::getNome() 
+{
+	return nome;
+}
 
 

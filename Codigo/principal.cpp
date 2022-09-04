@@ -10,6 +10,15 @@ using std::endl;
 Principal::Principal():
 	Einstein(),
 	Newton(),
+	Barreto(),
+	Valfredo(),
+
+	Bruno(),
+	Gab(),
+	Sam(),
+	Rodrigo(),
+	Lucas(),
+
 
 	Cambridge(),
 	Princeton(),
@@ -48,7 +57,26 @@ Principal::Principal():
 Principal::~Principal() {
 }
 
-void Principal::inicializaPessoas()
+void Principal::inicializaObjs() {}
+
+void Principal::inicializaAlunos() 
+{
+	Bruno.inicializa(29, 1, 2003, (char*)"Bruno");
+	Bruno.setRa(001);
+	Gab.inicializa(15, 5, 2004, (char*)"Gabi");
+	Gab.setRa(002);
+	Sam.inicializa(3, 1, 1999, (char*)"Samara");
+	Sam.setRa(003);
+	Rodrigo.inicializa(6, 9, 2002, (char*)"Rodrigo"); ;
+	Rodrigo.setRa(004);
+	Lucas.inicializa(9, 8, 2004, (char*)"Lucas");
+	Lucas.setRa(005);
+}
+void Principal::inicializaUniversidades() {}
+void Principal::inicializaDepartamentos() {}
+void Principal::inicializaDisciplinas() {}
+
+void Principal::inicializaProfessores()
 {
 	Einstein.inicializa(14, 3, 1879, (char*)"Einstein");
 	Newton.inicializa(4, 1, 1643, (char*)"Newton");

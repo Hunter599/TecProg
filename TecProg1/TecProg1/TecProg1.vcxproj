@@ -153,6 +153,7 @@
   <ItemGroup>
     <ClCompile Include="..\..\Codigo\aluno.cpp" />
     <ClCompile Include="..\..\Codigo\departamento.cpp" />
+    <ClCompile Include="..\..\Codigo\disciplina.cpp" />
     <ClCompile Include="..\..\Codigo\main.cpp" />
     <ClCompile Include="..\..\Codigo\pessoa.cpp" />
     <ClCompile Include="..\..\Codigo\principal.cpp" />

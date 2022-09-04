@@ -1,20 +1,20 @@
 #ifndef _DEPARTAMENTO_H_
 #define _DEPARTAMENTO_H_
 
-#include "disciplina.h"
-#include <list>
-
-using std::list;
 
 class Universidade;
+class Disciplina;
 
 class Departamento{
 private:
 
     char nomeD[30];
 	Universidade* uniD;
-	list<Disciplina*> lDiscp;
+	
+	Disciplina *disciplinaPrim;
+	Disciplina *disciplinaAtual;
 
+	
 
 public:
 
@@ -24,6 +24,13 @@ public:
     void setNome(char* nd);
 	void setUniAffil(Universidade *unid);
     char* getNome();
+
+	void incluiDisciplina(Disciplina* disc);
+	void listeDisciplinasInicio();
+	void listeDisciplinasFim();
+
+	
+
 };
 
 #endif
