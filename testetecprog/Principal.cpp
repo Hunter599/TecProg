@@ -1,13 +1,13 @@
 #include "Principal.h"
 #include "Departamento.h"
-#include "Disciplina.h"
+//#include "Disciplina.h"
 #include <time.h>
 #include <iostream>
 using std::cout;
 using std::endl;
 using namespace std;
 
-#include "Principal.h"
+//#include "Disciplina.h"
 
 Principal::Principal():
     Einstein(),
@@ -69,7 +69,7 @@ void Principal::Inicializa()
     InicializaUniversidades();
     InicializaDepartamentos();
     InicializaProfessores();
-    InicializaDisciplinas();
+    //InicializaDisciplinas();
 }
 
 void Principal::InicializaUniversidades()
@@ -115,7 +115,7 @@ void Principal::InicializaProfessores()
     Newton.setDepartamento(&MatematicaCambridge);
 }
 
-void Principal::InicializaDisciplinas()
+/*void Principal::InicializaDisciplinas()
 {
     Computacao1.setNome("Computacao I 2006");
     Introd_Alg.setNome("Intro de Alg de Programacao 2007");
@@ -132,7 +132,7 @@ void Principal::InicializaDisciplinas()
     Computacao2.setDepartamento(&DAELN);
     Metodos2.setDepartamento(&DAELN);
 
-}
+}*/
 
 void Principal::Executar()
 {
@@ -162,9 +162,9 @@ void Principal::Executar()
     //Pedro.QualDepartamentoTrabalho ();
 }
 
-void Principal::ListeDiscDeptos()
+/*void Principal::ListeDiscDeptos()
 {
     DAELN.listeDisciplinas();
 
     cout << " " << endl;
-}
+}*/

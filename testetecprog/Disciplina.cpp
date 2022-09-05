@@ -2,7 +2,7 @@
 #include "Universidade.h"
 #include <string.h>
 #include "Departamento.h"
-
+#include "Principal.h"
 Disciplina::Disciplina (char* ac)
 {
     pDeptoAssociado=NULL;
@@ -39,6 +39,8 @@ char* Disciplina::getNome ()
 void Disciplina::setDepartamento (Departamento* pDep)
 {
     pDeptoAssociado=pDep;
+
+    pDep->incluaDisciplina(this);
 }
 
 Departamento* Disciplina::getDepartamento()

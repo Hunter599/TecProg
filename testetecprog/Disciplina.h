@@ -2,7 +2,9 @@
 #define _DISCIPLINA_H_
 #include "Departamento.h"
 #include "Aluno.h"
-#include "Principal.h"
+//#include "Principal.h"
+
+class Principal;
 
 class Disciplina
 {

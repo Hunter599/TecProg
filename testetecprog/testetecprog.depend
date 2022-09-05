@@ -21,21 +21,16 @@
 	<iostream>
 	<stdio.h>
 
-1662302509 c:\users\letic\documents\progutfpr\trabalhos\testetecprog\principal.h
-	"Pessoa.h"
+1662342322 c:\users\letic\documents\progutfpr\trabalhos\testetecprog\principal.h
 	"Universidade.h"
 	"Aluno.h"
-	"Departamento.h"
 	"Professor.h"
-	"Disciplina.h"
 
-1662302509 source:c:\users\letic\documents\progutfpr\trabalhos\testetecprog\principal.cpp
+1662342303 source:c:\users\letic\documents\progutfpr\trabalhos\testetecprog\principal.cpp
 	"Principal.h"
 	"Departamento.h"
-	"Disciplina.h"
 	<time.h>
 	<iostream>
-	"Principal.h"
 
 1661814218 source:c:\users\letic\documents\progutfpr\trabalhos\testetecprog\universidade.cpp
 	"Universidade.h"
@@ -53,7 +48,7 @@
 	"Disciplina.h"
 	<iostream>
 
-1662044479 c:\users\letic\documents\progutfpr\trabalhos\testetecprog\departamento.h
+1662342232 c:\users\letic\documents\progutfpr\trabalhos\testetecprog\departamento.h
 
 1661810659 c:\users\letic\documents\progutfpr\trabalhos\testetecprog\professor.h
 	"Pessoa.h"
@@ -65,16 +60,16 @@
 	"Professor.h"
 	<iostream>
 
-1662302114 source:c:\users\letic\documents\progutfpr\trabalhos\testetecprog\disciplina.cpp
+1662304009 source:c:\users\letic\documents\progutfpr\trabalhos\testetecprog\disciplina.cpp
 	"Disciplina.h"
 	"Universidade.h"
 	<string.h>
 	"Departamento.h"
+	"Principal.h"
 
-1662302306 c:\users\letic\documents\progutfpr\trabalhos\testetecprog\disciplina.h
+1662342232 c:\users\letic\documents\progutfpr\trabalhos\testetecprog\disciplina.h
 	"Departamento.h"
 	"Aluno.h"
-	"Principal.h"
 
 1661812035 c:\users\letic\documents\progutfpr\trabalhos\testetecprog\aluno.h
 	"Pessoa.h"

@@ -1,8 +1,6 @@
 #ifndef _DEPARTAMENTO_H_
 #define _DEPARTAMENTO_H_
-
 class Disciplina;
-
 class Universidade;
 
 class Departamento
