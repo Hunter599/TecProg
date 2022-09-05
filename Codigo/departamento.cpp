@@ -26,7 +26,7 @@ char* Departamento::getNome(){
     return nomeD;
 }
 
-void Departamento::setUniAffil(Universidade *unid) 
+void Departamento::setUniAfil(Universidade *unid) 
 {
 	uniD = unid;
 }

@@ -13,9 +13,8 @@ using std::endl;
 int main(){
 
     Principal objetoPrincipal;
-
-	objetoPrincipal.inicializaAlunos();
-	objetoPrincipal.inicializaProfessores();
+	objetoPrincipal.inicializaObjs();
+	
     objetoPrincipal.executar();
 
     return 0;

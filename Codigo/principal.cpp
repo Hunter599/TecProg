@@ -25,7 +25,15 @@ Principal::Principal():
 	UTFPR(),
 
 	FisicaCambridge(),
-	FisicaPrinceton()
+	FisicaPrinceton(),
+	DAFIS(),
+	DAINF(),
+	
+	TecProg(),
+	FundProg(),
+	FisTeo(),
+	IntroLog()
+
 {
     diaAtual=-1;
     mesAtual=-1;
@@ -33,31 +41,39 @@ Principal::Principal():
 
     
 
-    Cambridge.setNome((char*)"Cambridge");
-    Princeton.setNome((char*)"Princeton");
-    UTFPR.setNome((char*)"UTFPR");
-
-	FisicaCambridge.setNome((char*)"Fisica Cambridge");
-	FisicaPrinceton.setNome((char*)"Fisica Princeton");
-	DAFIS.setNome((char*)"DAFIS UTFPR");
-	DAINF.setNome((char*)"DAINF UTFPR");
-
 	Cambridge.setDpto(&FisicaCambridge);
 	Princeton.setDpto(&FisicaPrinceton);
 	UTFPR.setDpto(&DAFIS);
 	UTFPR.setDpto(&DAINF);
 
-    Einstein.setUniAfil(&Cambridge);
-    Newton.setUniAfil(&Princeton);
+	//AFILIAR DEPARTAMENTOS A UNIVERSIDADES
+
+	Einstein.setUniAfil(&Cambridge);
+	Newton.setUniAfil(&Princeton);
 	Einstein.setDepAfil(&FisicaCambridge);
 	Newton.setDepAfil(&FisicaPrinceton);
+
+	TecProg.setDepAfil(&DAINF);
+	FundProg.setDepAfil(&DAINF);
+	IntroLog.setDepAfil(&DAINF);
+	FisTeo.setDepAfil(&DAFIS);
+
+
+	
 
 }
 
 Principal::~Principal() {
 }
 
-void Principal::inicializaObjs() {}
+void Principal::inicializaObjs() 
+{
+	inicializaAlunos();
+	inicializaProfessores();
+	inicializaUniversidades();
+	inicializaDepartamentos();
+	inicializaDisciplinas();
+}
 
 void Principal::inicializaAlunos() 
 {
@@ -72,9 +88,29 @@ void Principal::inicializaAlunos()
 	Lucas.inicializa(9, 8, 2004, (char*)"Lucas");
 	Lucas.setRa(005);
 }
-void Principal::inicializaUniversidades() {}
-void Principal::inicializaDepartamentos() {}
-void Principal::inicializaDisciplinas() {}
+
+void Principal::inicializaUniversidades() 
+{
+	Cambridge.setNome((char*)"Cambridge");
+	Princeton.setNome((char*)"Princeton");
+	UTFPR.setNome((char*)"UTFPR");
+}
+
+void Principal::inicializaDepartamentos() 
+{
+	FisicaCambridge.setNome((char*)"Fisica Cambridge");
+	FisicaPrinceton.setNome((char*)"Fisica Princeton");
+	DAFIS.setNome((char*)"DAFIS UTFPR");
+	DAINF.setNome((char*)"DAINF UTFPR");
+}
+
+void Principal::inicializaDisciplinas() 
+{
+	TecProg.setDisc((char*)"Tecnicas de Programacao");
+	FisTeo.setDisc((char*)"Fisica Teorica");
+	FundProg.setDisc((char*)"Fundamentos de Programacao");
+	IntroLog.setDisc((char*)"Introducao a Logica");
+}
 
 void Principal::inicializaProfessores()
 {
@@ -87,8 +123,14 @@ void Principal::executar(){
     cout<< "Digite dia, mes e ano"<< endl;
     cin >> diaAtual >> mesAtual >> anoAtual;
 
+
+
+
+
     Einstein.calcIdade(diaAtual,mesAtual,anoAtual);
     Newton.calcIdade(diaAtual,mesAtual,anoAtual);
+
+	
 
     Einstein.trabalhaUni();
     Newton.trabalhaUni();
@@ -97,5 +139,7 @@ void Principal::executar(){
     Newton.showIdade();
 
 	UTFPR.showDpts();
+	DAFIS.listeDisciplinasInicio();
+	DAINF.listeDisciplinasInicio();
 
 }

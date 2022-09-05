@@ -7,7 +7,7 @@
 class Disciplina {
 
 private:
-    char nomeDisc[30];
+    char nomeDisc[50];
 	//char area_conhecimento[150]; <-- slide do professor, nao sei que informacao vai aqui
 	Departamento* dDepAfil;
 

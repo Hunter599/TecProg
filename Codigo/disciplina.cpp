@@ -12,6 +12,8 @@ using std::endl;
 Disciplina::Disciplina(char* n) 
 {
 	setDisc(n);
+	proxDisc = nullptr;
+	antDisc = nullptr;
 }
 Disciplina::~Disciplina()
 {
@@ -38,6 +40,7 @@ void Disciplina::setDepAfil(Departamento* dep)
 
 void Disciplina::setProxDisc(Disciplina* proxDis) 
 {
+	if (proxDis != NULL)
 	proxDisc = proxDis;
 }
 

@@ -37,6 +37,7 @@ private:
 	Disciplina TecProg;
 	Disciplina FundProg;
 	Disciplina FisTeo;
+	Disciplina IntroLog;
 
 
     int diaAtual=0;

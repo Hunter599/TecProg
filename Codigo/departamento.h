@@ -22,7 +22,7 @@ public:
     ~Departamento();
 
     void setNome(char* nd);
-	void setUniAffil(Universidade *unid);
+	void setUniAfil(Universidade *unid);
     char* getNome();
 
 	void incluiDisciplina(Disciplina* disc);
