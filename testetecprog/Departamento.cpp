@@ -1,7 +1,10 @@
 #include "Departamento.h"
-#include <string.h>
-#include "Universidade.h"
+
+//#include "Universidade.h"
 #include "Disciplina.h"
+
+#include <string.h>
+
 #include <iostream>
 using std::cout;
 using std::endl;
@@ -49,6 +52,7 @@ void Departamento::incluaDisciplina(Disciplina* pd)
     else
     {
         pDisciplAtual->pProx=pd;
+        pd->pAntes=pDisciplAtual;
         pDisciplAtual=pd;
     }
 }
@@ -63,5 +67,18 @@ void Departamento::listeDisciplinas()
     {
         cout << "A disciplina " << pAux->getNome() << "pertence ao Departamento " << nome << endl;
         pAux = pAux->pProx;
+    }
+}
+
+void Departamento::listeDisciplinas2()
+{
+    Disciplina* pAux;
+
+    pAux=pDisciplAtual;
+
+    while (pAux!=NULL)
+    {
+        cout << "A disciplina " << pAux->getNome() << "pertence ao Departamento " << nome << endl;
+        pAux = pAux->pAntes;
     }
 }

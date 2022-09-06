@@ -2,7 +2,7 @@
 #define _PROFESSOR_H_
 
 #include "Pessoa.h"
-#include "Universidade.h"
+//#include "Universidade.h"
 
 class Professor: public Pessoa
 {

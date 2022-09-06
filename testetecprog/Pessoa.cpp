@@ -1,5 +1,7 @@
 #include "Pessoa.h"
+
 #include <string.h>
+
 #include <iostream>
 #include <stdio.h>
 using std::cout;
@@ -45,6 +47,12 @@ int Pessoa::getIdade()
 {
     return idadeP;
 }
+
+char* Pessoa::getNome ()
+{
+    return nomeP;
+}
+
 
 void Pessoa::setUnivFiliado (Universidade* pu)
 {

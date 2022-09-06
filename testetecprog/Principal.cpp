@@ -1,13 +1,13 @@
 #include "Principal.h"
-#include "Departamento.h"
+//#include "Departamento.h"
 //#include "Disciplina.h"
+
 #include <time.h>
+
 #include <iostream>
 using std::cout;
 using std::endl;
 using namespace std;
-
-//#include "Disciplina.h"
 
 Principal::Principal():
     Einstein(),
@@ -46,7 +46,7 @@ Principal::Principal():
     // Exemplo: Ao invés de 2009, retorna 109.
     anoAtual = local->tm_year + 1900;
 
-    //Codigo para digitar manualmente:
+    ///Codigo para digitar manualmente:
     /*cout << "Digite o dia atual: " << endl;
     cin >> diaAtual;
     cout << "Digite o mes atual: " << endl;
@@ -69,7 +69,7 @@ void Principal::Inicializa()
     InicializaUniversidades();
     InicializaDepartamentos();
     InicializaProfessores();
-    //InicializaDisciplinas();
+    InicializaDisciplinas();
 }
 
 void Principal::InicializaUniversidades()
@@ -115,56 +115,82 @@ void Principal::InicializaProfessores()
     Newton.setDepartamento(&MatematicaCambridge);
 }
 
-/*void Principal::InicializaDisciplinas()
+void Principal::InicializaAlunos()
+{
+    Leticia.Inicializa(18, 5, 2004, "Leticia Walger Amaro");
+    Ana.Inicializa(21, 9, 2000, "Ana B.");
+    Pedro.Inicializa(10, 1, 2003, "Pedro C.");
+
+    Leticia.setRA(2469847);
+    Ana.setRA(1101111);
+    Leticia.setRA(2222223);
+}
+
+void Principal::InicializaDisciplinas()
 {
     Computacao1.setNome("Computacao I 2006");
     Introd_Alg.setNome("Intro de Alg de Programacao 2007");
     Computacao2.setNome("Computacao II 2007");
     Metodos2.setNome("Metodos II");
 
-    DAELN.incluaDisciplina(&Computacao1);
-    DAELN.incluaDisciplina(&Introd_Alg);
-    DAELN.incluaDisciplina(&Computacao2);
-    DAELN.incluaDisciplina(&Metodos2);
-
     Computacao1.setDepartamento(&DAELN);
     Introd_Alg.setDepartamento(&DAELN);
     Computacao2.setDepartamento(&DAELN);
     Metodos2.setDepartamento(&DAELN);
 
-}*/
+    Computacao1.incluaAluno(&Leticia);
+    Computacao1.incluaAluno(&Ana);
+    Computacao1.incluaAluno(&Pedro);
 
-void Principal::Executar()
+}
+
+void Principal::CalcIdadeProfs()
 {
     Simao.Calc_Idade (diaAtual, mesAtual, anoAtual);
     Einstein.Calc_Idade (diaAtual, mesAtual, anoAtual);
     Newton.Calc_Idade (diaAtual, mesAtual, anoAtual);
-    //Leticia.Calc_Idade (diaAtual, mesAtual, anoAtual);
-    //Ana.Calc_Idade (diaAtual, mesAtual, anoAtual);
-    //Pedro.Calc_Idade (diaAtual, mesAtual, anoAtual);
+}
 
-    cout << " " << endl;
-
+void Principal::UnivOndesOsProfsTrabalham()
+{
     Simao.OndeTrabalho();
     Einstein.OndeTrabalho();
     Newton.OndeTrabalho();
-    //Leticia.OndeTrabalho();
-    //Ana.OndeTrabalho();
-    //Pedro.OndeTrabalho();
+}
 
-    cout << " " << endl;
-
+void Principal::DepOndesOsProfsTrabalham()
+{
     Simao.QualDepartamentoTrabalho ();
     Einstein.QualDepartamentoTrabalho ();
     Newton.QualDepartamentoTrabalho ();
-    //Leticia.QualDepartamentoTrabalho ();
-    //Ana.QualDepartamentoTrabalho ();
-    //Pedro.QualDepartamentoTrabalho ();
 }
 
-/*void Principal::ListeDiscDeptos()
+void Principal::ListeDiscDeptos()
 {
     DAELN.listeDisciplinas();
 
-    cout << " " << endl;
-}*/
+    cout << endl;
+}
+
+void Principal::ListeAlunosDisc()
+{
+    Computacao1.listeAlunos();
+    cout << endl;
+
+    Computacao1.listeAlunos2();
+    cout << endl;
+}
+
+void Principal::Executar()
+{
+    CalcIdadeProfs();
+
+    cout << endl;
+
+    UnivOndesOsProfsTrabalham();
+
+    cout << endl;
+
+    DepOndesOsProfsTrabalham();
+
+}

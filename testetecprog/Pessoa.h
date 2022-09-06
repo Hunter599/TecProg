@@ -1,7 +1,9 @@
 #ifndef _PESSOA_H_
 #define _PESSOA_H_
+
 #include "Universidade.h"
-#include <stdio.h>
+
+//#include <stdio.h>
 
 class Pessoa
 {
@@ -23,6 +25,7 @@ public:
     void Inicializa (int diaNa=0, int mesNa=0, int anoNa=0, const char nome[]="");
     void Calc_Idade (int diaAT, int mesAT, int anoAT);
     int getIdade();
+    char* getNome();
     void setUnivFiliado (Universidade* pu);
     void setDepartamento (Departamento* pdep);
     void OndeTrabalho ();

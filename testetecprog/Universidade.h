@@ -1,7 +1,10 @@
 #ifndef _UNIVERSIDADE_H_
 #define _UNIVERSIDADE_H_
+
 #include "Departamento.h"
+
 #include <list>
+
 using namespace std;
 
 class Universidade

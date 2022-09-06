@@ -1,5 +1,6 @@
 #ifndef _DEPARTAMENTO_H_
 #define _DEPARTAMENTO_H_
+
 class Disciplina;
 class Universidade;
 
@@ -24,5 +25,6 @@ private:
 
     void incluaDisciplina (Disciplina* pd);
     void listeDisciplinas ();
+    void listeDisciplinas2 ();
 };
 #endif

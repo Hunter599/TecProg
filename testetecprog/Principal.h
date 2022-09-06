@@ -1,16 +1,14 @@
 #ifndef _PRINCIPAL_H_
 #define _PRINCIPAL_H_
-#include "Universidade.h"
+
 #include "Aluno.h"
 #include "Professor.h"
-//#include "Disciplina.h"
-
-//class Disciplina;
+#include "Disciplina.h"
 
 class Principal
 {
 private:
-    Pessoa Leticia, Ana, Pedro;
+    Aluno Leticia, Ana, Pedro;
 
     Professor Einstein, Newton, Simao;
 
@@ -18,7 +16,7 @@ private:
 
     Departamento DAELN, FisicaPrinceton, MatematicaCambridge, DAINF, DAQBI;
 
-    //Disciplina Computacao1, Introd_Alg, Computacao2, Metodos2;
+    Disciplina Computacao1, Introd_Alg, Computacao2, Metodos2;
 
     int diaAtual, mesAtual, anoAtual;
 
@@ -30,6 +28,7 @@ public:
     void InicializaUniversidades();
     void InicializaDepartamentos();
     void InicializaProfessores();
+    void InicializaAlunos();
     void InicializaDisciplinas();
 
     void Executar();
@@ -37,6 +36,8 @@ public:
     void CalcIdadeProfs();
     void UnivOndesOsProfsTrabalham();
     void DepOndesOsProfsTrabalham();
+    void ConhecePessoa();
     void ListeDiscDeptos();
+    void ListeAlunosDisc();
 };
 #endif

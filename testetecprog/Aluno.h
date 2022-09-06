@@ -9,11 +9,15 @@ private:
     int ra;
 
 public:
-    Aluno(int diaNa, int mesNa, int anoNa, char* nome = "", int i=-1);
+
+    Aluno *pProx;
+    Aluno *pAntes;
+
+    Aluno(int diaNa, int mesNa, int anoNa, char* nome="", int i=-1);
     Aluno();
     ~Aluno();
 
-    void setRA(int ra);
+    void setRA(int n_ra);
     int getRA();
 };
 
