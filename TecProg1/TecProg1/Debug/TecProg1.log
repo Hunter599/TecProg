@@ -1,9 +1,43 @@
-﻿  departamento.cpp
+﻿  aluno.cpp
+c:\users\bruno\onedrive\documents\github\tecprog\codigo\aluno.cpp(39): error C2039: 'setProxAl': is not a member of 'Aluno'
+  c:\users\bruno\onedrive\documents\github\tecprog\codigo\aluno.h(5): note: see declaration of 'Aluno'
+c:\users\bruno\onedrive\documents\github\tecprog\codigo\aluno.cpp(41): error C2065: 'proxAluno': undeclared identifier
+c:\users\bruno\onedrive\documents\github\tecprog\codigo\aluno.cpp(43): error C2039: 'setAntAl': is not a member of 'Aluno'
+  c:\users\bruno\onedrive\documents\github\tecprog\codigo\aluno.h(5): note: see declaration of 'Aluno'
+c:\users\bruno\onedrive\documents\github\tecprog\codigo\aluno.cpp(45): error C2065: 'antAluno': undeclared identifier
+c:\users\bruno\onedrive\documents\github\tecprog\codigo\aluno.cpp(49): error C2039: 'getProxAl': is not a member of 'Aluno'
+  c:\users\bruno\onedrive\documents\github\tecprog\codigo\aluno.h(5): note: see declaration of 'Aluno'
+c:\users\bruno\onedrive\documents\github\tecprog\codigo\aluno.cpp(51): error C2065: 'proxAluno': undeclared identifier
+c:\users\bruno\onedrive\documents\github\tecprog\codigo\aluno.cpp(54): error C2039: 'getAntAl': is not a member of 'Aluno'
+  c:\users\bruno\onedrive\documents\github\tecprog\codigo\aluno.h(5): note: see declaration of 'Aluno'
+c:\users\bruno\onedrive\documents\github\tecprog\codigo\aluno.cpp(56): error C2065: 'antAluno': undeclared identifier
+  departamento.cpp
   disciplina.cpp
+c:\users\bruno\onedrive\documents\github\tecprog\codigo\disciplina.cpp(74): error C2039: 'setProxAl': is not a member of 'Aluno'
+  c:\users\bruno\onedrive\documents\github\tecprog\codigo\aluno.h(5): note: see declaration of 'Aluno'
+c:\users\bruno\onedrive\documents\github\tecprog\codigo\disciplina.cpp(75): error C2039: 'setAntAl': is not a member of 'Aluno'
+  c:\users\bruno\onedrive\documents\github\tecprog\codigo\aluno.h(5): note: see declaration of 'Aluno'
+c:\users\bruno\onedrive\documents\github\tecprog\codigo\disciplina.cpp(86): error C2039: 'getProxAl': is not a member of 'Aluno'
+  c:\users\bruno\onedrive\documents\github\tecprog\codigo\aluno.h(5): note: see declaration of 'Aluno'
+c:\users\bruno\onedrive\documents\github\tecprog\codigo\disciplina.cpp(87): error C2039: 'getAntAl': is not a member of 'Aluno'
+  c:\users\bruno\onedrive\documents\github\tecprog\codigo\aluno.h(5): note: see declaration of 'Aluno'
+c:\users\bruno\onedrive\documents\github\tecprog\codigo\disciplina.cpp(91): error C2039: 'getProxAl': is not a member of 'Aluno'
+  c:\users\bruno\onedrive\documents\github\tecprog\codigo\aluno.h(5): note: see declaration of 'Aluno'
+c:\users\bruno\onedrive\documents\github\tecprog\codigo\disciplina.cpp(92): error C2039: 'setAntAl': is not a member of 'Aluno'
+  c:\users\bruno\onedrive\documents\github\tecprog\codigo\aluno.h(5): note: see declaration of 'Aluno'
+c:\users\bruno\onedrive\documents\github\tecprog\codigo\disciplina.cpp(96): error C2039: 'setAntAl': is not a member of 'Aluno'
+  c:\users\bruno\onedrive\documents\github\tecprog\codigo\aluno.h(5): note: see declaration of 'Aluno'
+c:\users\bruno\onedrive\documents\github\tecprog\codigo\disciplina.cpp(97): error C2039: 'setProxAl': is not a member of 'Aluno'
+  c:\users\bruno\onedrive\documents\github\tecprog\codigo\aluno.h(5): note: see declaration of 'Aluno'
+c:\users\bruno\onedrive\documents\github\tecprog\codigo\disciplina.cpp(111): error C2039: 'getProxAl': is not a member of 'Aluno'
+  c:\users\bruno\onedrive\documents\github\tecprog\codigo\aluno.h(5): note: see declaration of 'Aluno'
+c:\users\bruno\onedrive\documents\github\tecprog\codigo\disciplina.cpp(124): error C2039: 'getAntAl': is not a member of 'Aluno'
+  c:\users\bruno\onedrive\documents\github\tecprog\codigo\aluno.h(5): note: see declaration of 'Aluno'
+  elAluno.cpp
+c:\users\bruno\onedrive\documents\github\tecprog\codigo\elaluno.cpp(5): error C2084: function 'elAluno::elAluno(void)' already has a body
+  c:\users\bruno\onedrive\documents\github\tecprog\codigo\elaluno.h(11): note: see previous definition of '{ctor}'
+c:\users\bruno\onedrive\documents\github\tecprog\codigo\elaluno.cpp(11): error C2084: function 'elAluno::~elAluno(void)' already has a body
+  c:\users\bruno\onedrive\documents\github\tecprog\codigo\elaluno.h(12): note: see previous definition of '{dtor}'
   main.cpp
-  pessoa.cpp
   principal.cpp
-  professor.cpp
-  universidade.cpp
   Generating Code...
-  TecProg1.vcxproj -> C:\Users\bruno\OneDrive\Documents\GitHub\TecProg\TecProg1\Debug\TecProg1.exe

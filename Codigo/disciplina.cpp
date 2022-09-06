@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string.h>
 
+
 using std::cout;
 using std::endl;
 
@@ -12,8 +13,8 @@ using std::endl;
 Disciplina::Disciplina(char* n) 
 {
 	setDisc(n);
-	proxDisc = nullptr;
-	antDisc = nullptr;
+	proxDisc = NULL;
+	antDisc = NULL;
 }
 Disciplina::~Disciplina()
 {
@@ -38,13 +39,13 @@ void Disciplina::setDepAfil(Departamento* dep)
 }
 
 
-void Disciplina::setProxDisc(Disciplina* proxDis) 
+void Disciplina::setProxDisc(Disciplina *proxDis) 
 {
 	if (proxDis != NULL)
 	proxDisc = proxDis;
 }
 
-void Disciplina::setAntDisc(Disciplina* antDis) 
+void Disciplina::setAntDisc(Disciplina *antDis) 
 {
 	antDisc = antDis;
 }
@@ -62,22 +63,25 @@ Disciplina* Disciplina::getAntDisc()  const
 }
 
 
-void Disciplina::incluiAluno(Aluno* al) 
+void Disciplina::incluiAluno(elAluno* al) 
 {
+	elAluno *pAux = NULL;
+	pAux = new elAluno();
+
 	if (al == NULL) 
 	{
-		alunoPrim = al;
-		alunoAct = al;
+		alunoPrim = pAux;
+		alunoAct = pAux;
 	}
 	else 
 	{
-		alunoAct->setProxAl(al);
-		al->setAntAl(alunoAct);
+		alunoAct->setProxAl(pAux);
+		pAux->setAntAl(alunoAct);
 		alunoAct = al;
 	}
 }
 
-void Disciplina::excluiAluno(Aluno* al) 
+void Disciplina::excluiAluno(elAluno* al) 
 {
 	Aluno* aluProxAux = NULL;
 	Aluno* aluAntAux = NULL;

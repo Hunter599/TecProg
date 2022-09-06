@@ -40,9 +40,9 @@ private:
 	Disciplina IntroLog;
 
 
-    int diaAtual=0;
-    int mesAtual=0;
-    int anoAtual=0;
+    int diaAtual;
+    int mesAtual;
+    int anoAtual;
 
 public:
     Principal();

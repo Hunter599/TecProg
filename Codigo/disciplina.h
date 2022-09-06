@@ -1,7 +1,7 @@
 #ifndef _DISCIPLINA_H_
 #define _DISCIPLINA_H_
 #include "departamento.h"
-#include "aluno.h"
+#include "elAluno.h"
 
 
 class Disciplina {
@@ -14,8 +14,11 @@ private:
 	Disciplina* proxDisc;
 	Disciplina* antDisc;
 	
-	Aluno* alunoPrim;
-	Aluno* alunoAct; 
+	elAluno* alunoPrim;
+	elAluno* alunoAct; 
+
+	int nroAlunos;
+	int contAlunos;
 
 
 	 
@@ -35,8 +38,8 @@ public:
 	void setProxDisc(Disciplina* proxDis);
 	void setAntDisc(Disciplina* antDis);
 
-	void incluiAluno(Aluno* al);
-	void excluiAluno(Aluno* al); 
+	void incluiAluno(elAluno* al);
+	void excluiAluno(elAluno* al); 
 
 	void listeAlunosInicio();
 	void listeAlunosFim();

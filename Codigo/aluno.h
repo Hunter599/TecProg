@@ -7,8 +7,7 @@ class Aluno : public Pessoa
 private:
 	int RA;
 
-	Aluno* proxAluno;
-	Aluno* antAluno;
+	
 
 public:
 
@@ -19,11 +18,7 @@ public:
 	void setRa(int num);
 	int getRa();
 
-	Aluno* getProxAl();
-	Aluno* getAntAl();
-
-	void setProxAl(Aluno* proxAl);
-	void setAntAl(Aluno* antAl);
+	
 
 
 };
