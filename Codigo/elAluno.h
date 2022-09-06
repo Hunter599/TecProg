@@ -19,6 +19,6 @@ public:
 	Aluno* getProxAl();
 	Aluno* getAntAl();
 
-	void setProxAl(Aluno* proxAl);
-	void setAntAl(Aluno* antAl);
+	void setProxAl(elAluno* proxAl);
+	void setAntAl(elAluno* antAl);
 };

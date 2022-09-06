@@ -83,8 +83,8 @@ void Disciplina::incluiAluno(elAluno* al)
 
 void Disciplina::excluiAluno(elAluno* al) 
 {
-	Aluno* aluProxAux = NULL;
-	Aluno* aluAntAux = NULL;
+	elAluno* aluProxAux = NULL;
+	elAluno* aluAntAux = NULL;
 
 
 	aluProxAux = al->getProxAl();
@@ -92,8 +92,9 @@ void Disciplina::excluiAluno(elAluno* al)
 
 	if (alunoPrim == al) 
 	{
-		alunoPrim = al->getProxAl();
+		alunoPrim->setProxAl(al->getProxAl());
 		alunoPrim->setAntAl(NULL); //O primeiro nao tem anterior entao e nulo
+		delete(al);
 	}
 	else 
 	{
@@ -102,7 +103,7 @@ void Disciplina::excluiAluno(elAluno* al)
 	}
 
 }
-
+/* LISTAR ALUNOS
 void Disciplina::listeAlunosInicio() 
 {
 	Aluno* alu = NULL;
@@ -129,3 +130,4 @@ void Disciplina::listeAlunosFim()
 	}
 
 }
+*/
