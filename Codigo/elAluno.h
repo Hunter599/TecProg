@@ -5,8 +5,8 @@ class elAluno
 {
 private:
 	Aluno* pAluno; 
-	Aluno* proxAluno;
-	Aluno* antAluno;
+	elAluno* proxAluno;
+	elAluno* antAluno;
 
 public:
 	elAluno() ;
@@ -16,8 +16,8 @@ public:
 	char* getNome();
 	Aluno* getAluno();
 
-	Aluno* getProxAl();
-	Aluno* getAntAl();
+	elAluno* getProxElAl();
+	elAluno* getAntElAl();
 
 	void setProxAl(elAluno* proxAl);
 	void setAntAl(elAluno* antAl);

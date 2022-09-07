@@ -14,12 +14,6 @@ private:
 	Disciplina* proxDisc;
 	Disciplina* antDisc;
 	
-	elAluno* alunoPrim;
-	elAluno* alunoAct; 
-
-	int nroAlunos;
-	int contAlunos;
-
 
 	 
 
@@ -37,13 +31,6 @@ public:
 
 	void setProxDisc(Disciplina* proxDis);
 	void setAntDisc(Disciplina* antDis);
-
-	void incluiAluno(elAluno* al);
-	void excluiAluno(elAluno* al); 
-
-	void listeAlunosInicio();
-	void listeAlunosFim();
-
 
 };
 

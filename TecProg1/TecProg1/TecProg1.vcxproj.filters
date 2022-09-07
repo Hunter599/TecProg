@@ -45,6 +45,9 @@
     <ClCompile Include="..\..\Codigo\elAluno.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Codigo\listaAlunos.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Codigo\aluno.h">
@@ -69,6 +72,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Codigo\elAluno.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Codigo\listaAlunos.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -36,22 +36,22 @@ Aluno* elAluno::getAluno()
 //passar funcoes de aluno.cpp
 
 
-void elAluno::setProxAl(Aluno* proxAl)
+void elAluno::setProxAl(elAluno* proxAl)
 {
 	proxAluno = proxAl;
 }
-void elAluno::setAntAl(Aluno* antAl)
+void elAluno::setAntAl(elAluno* antAl)
 {
 	antAluno = antAl;
 }
 
 
-Aluno* elAluno::getProxAl()
+elAluno* elAluno::getProxElAl()
 {
 	return proxAluno;
 }
 
-Aluno* elAluno::getAntAl()
+elAluno* elAluno::getAntElAl()
 {
 	return antAluno;
 }

@@ -63,46 +63,7 @@ Disciplina* Disciplina::getAntDisc()  const
 }
 
 
-void Disciplina::incluiAluno(elAluno* al) 
-{
-	elAluno *pAux = NULL;
-	pAux = new elAluno();
 
-	if (al == NULL) 
-	{
-		alunoPrim = pAux;
-		alunoAct = pAux;
-	}
-	else 
-	{
-		alunoAct->setProxAl(pAux);
-		pAux->setAntAl(alunoAct);
-		alunoAct = al;
-	}
-}
-
-void Disciplina::excluiAluno(elAluno* al) 
-{
-	elAluno* aluProxAux = NULL;
-	elAluno* aluAntAux = NULL;
-
-
-	aluProxAux = al->getProxAl();
-	aluAntAux = al->getAntAl();
-
-	if (alunoPrim == al) 
-	{
-		alunoPrim->setProxAl(al->getProxAl());
-		alunoPrim->setAntAl(NULL); //O primeiro nao tem anterior entao e nulo
-		delete(al);
-	}
-	else 
-	{
-		aluProxAux->setAntAl(aluAntAux);
-		aluAntAux->setProxAl(aluProxAux);
-	}
-
-}
 /* LISTAR ALUNOS
 void Disciplina::listeAlunosInicio() 
 {

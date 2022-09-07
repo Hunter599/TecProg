@@ -155,6 +155,7 @@
     <ClCompile Include="..\..\Codigo\departamento.cpp" />
     <ClCompile Include="..\..\Codigo\disciplina.cpp" />
     <ClCompile Include="..\..\Codigo\elAluno.cpp" />
+    <ClCompile Include="..\..\Codigo\listaAlunos.cpp" />
     <ClCompile Include="..\..\Codigo\main.cpp" />
     <ClCompile Include="..\..\Codigo\pessoa.cpp" />
     <ClCompile Include="..\..\Codigo\principal.cpp" />
@@ -167,6 +168,7 @@
     <ClInclude Include="..\..\Codigo\departamento.h" />
     <ClInclude Include="..\..\Codigo\disciplina.h" />
     <ClInclude Include="..\..\Codigo\elAluno.h" />
+    <ClInclude Include="..\..\Codigo\listaAlunos.h" />
     <ClInclude Include="..\..\Codigo\pessoa.h" />
     <ClInclude Include="..\..\Codigo\principal.h" />
     <ClInclude Include="..\..\Codigo\professor.h" />
