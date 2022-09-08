@@ -5,31 +5,37 @@
 using std::cout;
 using std::endl;
 
-listaAlunos::listaAlunos()
+ListaAlunos::ListaAlunos()
 {
-	strcpy_s(nome, " ");
-	elAlunoAct = NULL;
-	elAlunoPrim = NULL;
+	strcpy_s(nomeListA, " ");
+	elAlunoAct = nullptr;
+	elAlunoPrim = nullptr;
 
 	contAlunos = 0;
 	nroAlunos = 45;
 }
 
-listaAlunos::~listaAlunos()
+ListaAlunos::~ListaAlunos()
 {
 }
 
-void listaAlunos::setNomeLista(char* n) 
+void ListaAlunos::setNomeLista(char* n)
 {
-	strcpy_s(nome, n);
+	strcpy_s(nomeListA, n);
 }
-void listaAlunos::incluaAluno(Aluno* pA) 
+
+char* ListaAlunos::getNomeLista() 
+{
+	return nomeListA;
+}
+void ListaAlunos::incluaAluno(Aluno* pA)
 {
 	if (contAlunos < 45 && pA != NULL) {
 		elAluno *pAux = NULL;
 		pAux = new elAluno();
+		pAux->setAluno(pA);
 
-		if (pA == NULL)
+		if (elAlunoPrim == NULL)
 		{
 			elAlunoPrim = pAux;
 			elAlunoAct = pAux;
@@ -38,22 +44,25 @@ void listaAlunos::incluaAluno(Aluno* pA)
 		{
 			elAlunoAct->setProxAl(pAux);
 			pAux->setAntAl(elAlunoAct);
-			elAlunoAct->setAluno(pA);
+			elAlunoAct = pAux;
 		}
 	
 	}
 	else if (contAlunos > 45)
 	{
-		
+		cout << "Sem vaga disponivel para Aluno turma lotada!" << endl;
 
 	}
+	else 
+	{
+		cout << "Error: ponteiro = NULL" <<endl;
+	}
 }
-void listaAlunos::listarAlunosIn() 
+void ListaAlunos::listarAlunosIn()
 {
 	elAluno* alu = NULL;
 	alu = elAlunoPrim;
 
-	cout << "Lista de alunos de " << nome << endl;
 	while (alu != NULL)
 	{
 		cout << alu->getNome() << "(" << alu->getAluno()->getRa() << ")" << endl;
@@ -62,12 +71,11 @@ void listaAlunos::listarAlunosIn()
 }
 
 	
-void listaAlunos::listarAlunosFim() 
+void ListaAlunos::listarAlunosFim() 
 {
 	elAluno* alu = NULL;
 	alu = elAlunoAct;
 
-	cout << nome << ": "<< endl;
 	while (alu != NULL)
 	{
 		cout << alu->getNome() << "(" << alu->getAluno()->getRa() << ")" << endl;
@@ -77,7 +85,7 @@ void listaAlunos::listarAlunosFim()
 
 
 
-void listaAlunos::excluiAluno(elAluno* al)
+void ListaAlunos::excluiAluno(elAluno* al)
 {
 	elAluno* aluProxAux = NULL;
 	elAluno* aluAntAux = NULL;

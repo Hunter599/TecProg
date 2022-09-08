@@ -1,7 +1,7 @@
 #pragma once
 #include "elAluno.h"
 
-class listaAlunos
+class ListaAlunos
 {
 private:
 	elAluno* elAlunoPrim;
@@ -10,12 +10,13 @@ private:
 	int nroAlunos;
 	int contAlunos;
 
-	char nome[100];
+	char nomeListA[100];
 
 public:
-	listaAlunos();
-	~listaAlunos();
+	ListaAlunos();
+	~ListaAlunos();
 	void setNomeLista(char* n);
+	char* getNomeLista();
 	void incluaAluno(Aluno* pA);
 	void excluiAluno(elAluno* pA);
 	void listarAlunosIn();

@@ -2,13 +2,12 @@
 #include "pessoa.h"
 #include "universidade.h"
 
-#include "pessoa.h"
 #include "professor.h"
 #include "aluno.h"
 
 #include "departamento.h"
 #include "universidade.h"
-#include "disciplina.h"
+#include "listaDisciplinas.h"
 
 class Principal{
 
@@ -39,6 +38,9 @@ private:
 	Disciplina FisTeo;
 	Disciplina IntroLog;
 
+	ListaAlunos ListaAlunos;
+	ListaDisciplinas ListaDisciplinas;
+
 
     int diaAtual;
     int mesAtual;
@@ -56,5 +58,6 @@ public:
 	void inicializaUniversidades();
 	void inicializaDepartamentos();
 	void inicializaDisciplinas();
-
+	void inicializaListas();
+	void calcIdades(int dAtual, int mAtual, int aAtual);
 };

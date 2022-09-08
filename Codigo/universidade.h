@@ -3,13 +3,18 @@
 #pragma once //<-- alternate
 //#include "disciplina.h"
 #include "departamento.h"
+#include <string.h>
+#include <iostream>
+using std::cout;
+using std::endl;
+
 
 class Universidade{
 
 private:
 
     char nomeU[30];
-	Departamento* dpts[50];
+	
 	int cont;
     //Disciplina
 
