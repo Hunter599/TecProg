@@ -19,6 +19,7 @@ private:
 	Professor Valfredo;
 
 	Aluno Bruno;
+	Aluno Leticia;
 	Aluno Gab;
 	Aluno Sam;
 	Aluno Rodrigo;
@@ -40,6 +41,7 @@ private:
 
 	ListaAlunos ListaAlunos;
 	ListaDisciplinas ListaDisciplinas;
+	//listaDepartamentos ListaDepartamentos;
 
 
     int diaAtual;

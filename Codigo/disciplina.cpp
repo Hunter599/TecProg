@@ -12,7 +12,7 @@ using std::endl;
 Disciplina::Disciplina(char* n) 
 {
 	setDisc(n);
-	dDepAfil = NULL;
+	dDepAfil = nullptr;
 }
 Disciplina::~Disciplina()
 {

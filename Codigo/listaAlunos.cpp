@@ -30,7 +30,7 @@ char* ListaAlunos::getNomeLista()
 }
 void ListaAlunos::incluaAluno(Aluno* pA)
 {
-	if (contAlunos < 45 && pA != NULL) {
+	if (contAlunos < nroAlunos && pA != NULL) {
 		elAluno *pAux = NULL;
 		pAux = new elAluno();
 		pAux->setAluno(pA);
@@ -48,9 +48,9 @@ void ListaAlunos::incluaAluno(Aluno* pA)
 		}
 	
 	}
-	else if (contAlunos > 45)
+	else if (contAlunos > nroAlunos)
 	{
-		cout << "Sem vaga disponivel para Aluno turma lotada!" << endl;
+		cout << "Sem vaga disponivel para Aluno, turma lotada!" << endl;
 
 	}
 	else 

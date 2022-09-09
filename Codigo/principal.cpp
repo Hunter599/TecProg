@@ -14,6 +14,7 @@ Principal::Principal():
 	Valfredo(),
 
 	Bruno(),
+	Leticia(),
 	Gab(),
 	Sam(),
 	Rodrigo(),
@@ -41,13 +42,6 @@ Principal::Principal():
     diaAtual=-1;
     mesAtual=-1;
     anoAtual=-1; 
-
-	Cambridge.setDpto(&FisicaCambridge);
-	Princeton.setDpto(&FisicaPrinceton);
-	UTFPR.setDpto(&DAFIS);
-	UTFPR.setDpto(&DAINF);
-
-	//AFILIAR DEPARTAMENTOS A UNIVERSIDADES
 
 	Einstein.setUniAfil(&Cambridge);
 	Newton.setUniAfil(&Princeton);
@@ -86,6 +80,8 @@ void Principal::inicializaAlunos()
 	Rodrigo.setRa(004);
 	Lucas.inicializa(9, 8, 2004, (char*)"Lucas");
 	Lucas.setRa(005);
+	Leticia.inicializa(18, 5, 2004, (char*)"Leticia");
+	Leticia.setRa(006);
 }
 
 void Principal::inicializaUniversidades() 
@@ -125,6 +121,7 @@ void Principal::inicializaListas()
 	ListaDisciplinas.setNomeLista((char*)"Lista de Disciplinas");
 
 	TecProg.incluiAluno(&Bruno);
+	TecProg.incluiAluno(&Leticia);
 	TecProg.incluiAluno(&Gab);
 	TecProg.incluiAluno(&Rodrigo);
 
@@ -133,16 +130,24 @@ void Principal::inicializaListas()
 	FisTeo.incluiAluno(&Rodrigo);
 
 	FundProg.incluiAluno(&Bruno);
+	FundProg.incluiAluno(&Leticia);
 	FundProg.incluiAluno(&Sam);
 	FundProg.incluiAluno(&Rodrigo);
 
 	IntroLog.incluiAluno(&Sam);
 	IntroLog.incluiAluno(&Gab);
+	IntroLog.incluiAluno(&Leticia);
 
 	DAFIS.incluiDisciplina(&FisTeo);
 	DAINF.incluiDisciplina(&FundProg);
 	DAINF.incluiDisciplina(&TecProg);
 	DAINF.incluiDisciplina(&IntroLog);
+
+	//Inclusão dos departamentos às universidades
+	UTFPR.incluaDep(&DAINF);
+	UTFPR.incluaDep(&DAFIS);
+	Princeton.incluaDep(&FisicaPrinceton);
+	Cambridge.incluaDep(&FisicaCambridge);
 }
 
 void Principal::calcIdades(int dAtual, int mAtual, int aAtual)
@@ -150,6 +155,7 @@ void Principal::calcIdades(int dAtual, int mAtual, int aAtual)
 	Einstein.calcIdade(dAtual, mAtual, aAtual);
 	Newton.calcIdade(dAtual, mAtual, aAtual);
 	Bruno.calcIdade(dAtual, mAtual, aAtual);
+	Leticia.calcIdade(dAtual, mAtual, aAtual);
 	Rodrigo.calcIdade(dAtual, mAtual, aAtual);
 	Lucas.calcIdade(dAtual, mAtual, aAtual);
 	Sam.calcIdade(dAtual, mAtual, aAtual);
@@ -161,32 +167,38 @@ void Principal::executar(){
     cout<< "Digite dia, mes e ano"<< endl;
     cin >> diaAtual >> mesAtual >> anoAtual;
 
-    
-	
     Einstein.trabalhaUni();
     Newton.trabalhaUni();
 
 	calcIdades(diaAtual, mesAtual, anoAtual);
 
+	cout << endl; //pula linha
+
     Einstein.showIdade();
     Newton.showIdade();
 	Bruno.showIdade();
+	Leticia.showIdade();
 	Rodrigo.showIdade();
 	Lucas.showIdade();
 	Sam.showIdade();
 	Gab.showIdade();
+
+	cout << endl;
 
 	TecProg.listeAlunosInicio();
 	FisTeo.listeAlunosInicio();
 	FundProg.listeAlunosInicio();
 	IntroLog.listeAlunosInicio();
 
+	cout << endl;
+
 	DAFIS.listeDisciplinasInicio();
 	DAINF.listeDisciplinasInicio();
 
+	cout << endl;
 
-	//UTFPR.showDpts();
-	//DAFIS.listeDisciplinasInicio();
-	//DAINF.listeDisciplinasInicio();
+	UTFPR.listeDepsIni();
+	Cambridge.listeDepsIni();
+	Princeton.listeDepsIni();
 
 }
