@@ -41,8 +41,12 @@ private:
 
 	ListaAlunos ListaAlunos;
 	ListaDisciplinas ListaDisciplinas;
-	//listaDepartamentos ListaDepartamentos;
+	
+	int numero_uni;
+	int cont_uni;
 
+	Universidade* pUniPrim;
+	Universidade* pUniAtual;
 
     int diaAtual;
     int mesAtual;
@@ -62,4 +66,9 @@ public:
 	void inicializaDisciplinas();
 	void inicializaListas();
 	void calcIdades(int dAtual, int mAtual, int aAtual);
+
+	void incluaUniversidade(Universidade* puni);
+	void listeUniversidadesInicio();
+
+	void listeUniversidadesFim();
 };

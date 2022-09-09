@@ -1,11 +1,10 @@
-
-
 #include <iostream>
 using std::cout;
 using std::cin;
 using std::endl;
 
 #include "principal.h"
+#include "universidade.h"
 
 Principal::Principal():
 	Einstein(),
@@ -42,6 +41,12 @@ Principal::Principal():
     diaAtual=-1;
     mesAtual=-1;
     anoAtual=-1; 
+
+	pUniPrim = nullptr;
+	pUniAtual = nullptr;
+
+	numero_uni = 45;
+	cont_uni = 0;
 
 	Einstein.setUniAfil(&Cambridge);
 	Newton.setUniAfil(&Princeton);
@@ -115,11 +120,73 @@ void Principal::inicializaProfessores()
 	Newton.inicializa(4, 1, 1643, (char*)"Newton");
 }
 
+//Inclusão das universidades na lista
+
+void Principal::incluaUniversidade(Universidade* puni)
+{
+	if (cont_uni < numero_uni && puni != nullptr)
+	{
+		if (pUniPrim == nullptr)
+		{
+			pUniPrim = puni;
+			pUniAtual = puni;
+		}
+		else
+		{
+			pUniAtual->setProxUni(puni);
+			puni->setAnteUni(pUniAtual);
+			pUniAtual = puni;
+		}
+		cont_uni++;
+	}
+	else if (cont_uni > numero_uni)
+	{
+		cout << "Nao eh possivel adicionar universidade, ha universidades demais!" << endl;
+
+	}
+	else
+	{
+	cout << "Error: ponteiro = NULL" << endl;
+	}
+}
+
+//Listagem de universidades
+
+void Principal::listeUniversidadesInicio()
+{
+	Universidade* paux;
+	paux = pUniPrim;
+
+	cout << "Universidades :" << endl;
+
+	while (paux != nullptr)
+	{
+		cout << paux->getNome() << endl;
+		paux = paux->getProxUni();
+	}
+}
+
+void Principal::listeUniversidadesFim()
+{
+	Universidade* paux;
+	paux = pUniAtual;
+
+	cout << "Universidades :" << endl;
+
+	while (paux != nullptr)
+	{
+		cout << paux->getNome() << endl;
+		paux = paux->getAnteUni();
+	}
+}
+
+
 void Principal::inicializaListas() 
 {
 	ListaAlunos.setNomeLista((char*)"Lista de Alunos");
 	ListaDisciplinas.setNomeLista((char*)"Lista de Disciplinas");
 
+	//Inclusão dos alunos às disciplinas
 	TecProg.incluiAluno(&Bruno);
 	TecProg.incluiAluno(&Leticia);
 	TecProg.incluiAluno(&Gab);
@@ -138,6 +205,7 @@ void Principal::inicializaListas()
 	IntroLog.incluiAluno(&Gab);
 	IntroLog.incluiAluno(&Leticia);
 
+	//Inclusão das disciplinas aos departamentos
 	DAFIS.incluiDisciplina(&FisTeo);
 	DAINF.incluiDisciplina(&FundProg);
 	DAINF.incluiDisciplina(&TecProg);
@@ -148,6 +216,12 @@ void Principal::inicializaListas()
 	UTFPR.incluaDep(&DAFIS);
 	Princeton.incluaDep(&FisicaPrinceton);
 	Cambridge.incluaDep(&FisicaCambridge);
+
+	//Inclusão das universidades à lista em principal
+	incluaUniversidade(&UTFPR);
+	incluaUniversidade(&Princeton);
+	incluaUniversidade(&Cambridge);
+	
 }
 
 void Principal::calcIdades(int dAtual, int mAtual, int aAtual)
@@ -174,6 +248,7 @@ void Principal::executar(){
 
 	cout << endl; //pula linha
 
+	//Mostra pessoas e suas idades
     Einstein.showIdade();
     Newton.showIdade();
 	Bruno.showIdade();
@@ -185,6 +260,7 @@ void Principal::executar(){
 
 	cout << endl;
 
+	//Mostra listas de alunos de acordo com as disciplinas que eles cursam
 	TecProg.listeAlunosInicio();
 	FisTeo.listeAlunosInicio();
 	FundProg.listeAlunosInicio();
@@ -192,13 +268,19 @@ void Principal::executar(){
 
 	cout << endl;
 
+	//Mostra lista de disciplinas de cada departamento
 	DAFIS.listeDisciplinasInicio();
 	DAINF.listeDisciplinasInicio();
 
 	cout << endl;
 
+	//Mostra lista de departamentos de cada universidade
 	UTFPR.listeDepsIni();
 	Cambridge.listeDepsIni();
 	Princeton.listeDepsIni();
 
+	cout << endl;
+
+	//Mostra lista de universidades
+	listeUniversidadesInicio();
 }

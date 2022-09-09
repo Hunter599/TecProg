@@ -24,6 +24,9 @@ private:
     elDepartamento *pElDepPrim;
     elDepartamento *pElDepAtual;
 
+    Universidade *pProx;
+    Universidade *pAnte;
+
 public:
 
     Universidade(char* nu = (char*)"");
@@ -36,5 +39,11 @@ public:
     void incluaDep(Departamento* dep);
     void listeDepsIni();
     void listeDepsFim();
+
+    void setProxUni(Universidade* proxU);
+    void setAnteUni(Universidade* anteU);
+
+    Universidade* getProxUni();
+    Universidade* getAnteUni();
 };
 //#endif

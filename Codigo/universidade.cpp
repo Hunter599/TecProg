@@ -66,7 +66,6 @@ void Universidade::incluaDep(Departamento* dep)
 	}
 	else
 	{
-		//problema: ele entra aqui
 		cout << "Error: ponteiro = NULL" << endl;
 	}
 }
@@ -99,4 +98,24 @@ void Universidade::listeDepsFim()
 		cout << paux->getNome() << endl;
 		paux = paux->getAntElDep();
 	}
+}
+
+void Universidade::setProxUni(Universidade* proxU)
+{
+	pProx = proxU;
+}
+
+void Universidade::setAnteUni(Universidade* anteU)
+{
+	pAnte = anteU;
+}
+
+Universidade* Universidade::getProxUni()
+{
+	return pProx;
+}
+
+Universidade* Universidade::getAnteUni()
+{
+	return pAnte;
 }

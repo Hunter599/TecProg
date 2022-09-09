@@ -1,5 +1,3 @@
-
-
 #include "principal.h"
 
 #include <stdio.h>
@@ -14,7 +12,7 @@ int main(){
 
     Principal objetoPrincipal;
 	objetoPrincipal.inicializaObjs();
-	
+
     objetoPrincipal.executar();
 
     return 0;
