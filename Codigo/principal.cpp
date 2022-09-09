@@ -35,8 +35,8 @@ Principal::Principal():
 	IntroLog(),
 
 	ListaAlunos(),
-	ListaDisciplinas()
-
+	ListaDisciplinas(),
+	ListaDepartamentos()
 {
     diaAtual=-1;
     mesAtual=-1;
@@ -185,6 +185,7 @@ void Principal::inicializaListas()
 {
 	ListaAlunos.setNomeLista((char*)"Lista de Alunos");
 	ListaDisciplinas.setNomeLista((char*)"Lista de Disciplinas");
+	ListaDepartamentos.setNomeLista((char*)"Lista de Departamentos");
 
 	//Inclusão dos alunos às disciplinas
 	TecProg.incluiAluno(&Bruno);

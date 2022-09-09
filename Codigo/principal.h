@@ -41,6 +41,7 @@ private:
 
 	ListaAlunos ListaAlunos;
 	ListaDisciplinas ListaDisciplinas;
+	ListaDepartamentos ListaDepartamentos;
 	
 	int numero_uni;
 	int cont_uni;

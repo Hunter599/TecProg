@@ -1,8 +1,8 @@
 //#ifndef_UNIVERSIDADE_H_
 //#define_UNIVERSIDADE_H_
 #pragma once //<-- alternate
-//#include "disciplina.h"
 
+#include "listaDepartamentos.h"
 #include "departamento.h"
 #include "elDepartamento.h"
 
@@ -18,11 +18,7 @@ private:
 
     char nomeU[30];
 
-    int numero_deps;
-	int cont_deps;
-
-    elDepartamento *pElDepPrim;
-    elDepartamento *pElDepAtual;
+    ListaDepartamentos ObjLDepartamentos;
 
     Universidade *pProx;
     Universidade *pAnte;
@@ -33,17 +29,16 @@ public:
     ~Universidade();
 
     void setNome(char* nu);
-	//void setDpto(Departamento* dpt, int cont);
     char* getNome();
-
-    void incluaDep(Departamento* dep);
-    void listeDepsIni();
-    void listeDepsFim();
 
     void setProxUni(Universidade* proxU);
     void setAnteUni(Universidade* anteU);
 
     Universidade* getProxUni();
     Universidade* getAnteUni();
+
+    void incluaDep(Departamento* dep);
+    void listeDepsIni();
+    void listeDepsFim();
 };
 //#endif
