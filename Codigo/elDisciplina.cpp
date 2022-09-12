@@ -28,8 +28,9 @@ Disciplina* ElDisciplina::getDisciplina() const
 
 void ElDisciplina::setProxElDisc(ElDisciplina* proxD) 
 {
-	if (proxElDisc != nullptr)
+	if (proxD != nullptr)
 	proxElDisc = proxD;
+
 }
 ElDisciplina* ElDisciplina::getProxElDisc() const 
 {

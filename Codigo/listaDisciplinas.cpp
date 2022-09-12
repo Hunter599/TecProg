@@ -8,8 +8,17 @@ ListaDisciplinas::ListaDisciplinas()
 }
 ListaDisciplinas::~ListaDisciplinas() 
 {
-	elDisciplinaPrim = nullptr;
-	elDisciplinaAtual = nullptr;
+	ElDisciplina *pDiscAux1, *pDiscAux2 ;
+	pDiscAux1 = elDisciplinaPrim;
+	pDiscAux2 = pDiscAux1;
+
+	while (pDiscAux1 != nullptr) 
+	{
+		pDiscAux2 = pDiscAux1->getProxElDisc();
+		delete (pDiscAux1);
+		pDiscAux1 = pDiscAux2;
+	}
+	
 }
 
 void ListaDisciplinas::setNomeLista(char* n) 

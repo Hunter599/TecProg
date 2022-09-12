@@ -427,6 +427,7 @@ void Principal::executar(){
 
 	//Mostra lista de disciplinas de cada departamento
 	DAFIS.listeDisciplinasInicio();
+	cout << endl;
 	DAINF.listeDisciplinasInicio();
 
 	cout << endl;
