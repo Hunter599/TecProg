@@ -33,7 +33,7 @@ void Disciplina::setDepAfil(Departamento* dep)
 {
 	dDepAfil = dep;
 
-	dep->incluiDisciplina(this); 
+	//dep->incluiDisciplina(this); 
 }
 
 

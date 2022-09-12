@@ -17,6 +17,18 @@ ListaAlunos::ListaAlunos()
 
 ListaAlunos::~ListaAlunos()
 {
+	elAluno *pElAlunoAux1, *pElAlunoAux2;
+	pElAlunoAux1 = elAlunoPrim;
+	pElAlunoAux2 = pElAlunoAux1;
+
+	while (pElAlunoAux1 != NULL) 
+	{
+		pElAlunoAux2 = pElAlunoAux1->getProxElAl();
+		delete(pElAlunoAux1);
+		pElAlunoAux1 = pElAlunoAux2;
+	}
+
+
 }
 
 void ListaAlunos::setNomeLista(char* n)
@@ -68,6 +80,7 @@ void ListaAlunos::listarAlunosIn()
 		cout << alu->getNome() << "(" << alu->getAluno()->getRa() << ")" << endl;
 		alu = alu->getProxElAl();
 	}
+	cout << endl;
 }
 
 	
@@ -81,6 +94,7 @@ void ListaAlunos::listarAlunosFim()
 		cout << alu->getNome() << "(" << alu->getAluno()->getRa() << ")" << endl;
 		alu = alu->getAntElAl();
 	}
+	cout << endl;
 }
 
 

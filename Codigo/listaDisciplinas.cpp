@@ -33,8 +33,8 @@ char* ListaDisciplinas::getNomeLista()
 void ListaDisciplinas::incluaDisciplina(Disciplina* disc)
 {
 	if (disc != nullptr) {
-		ElDisciplina *discAux;
-		discAux = new ElDisciplina;
+		ElDisciplina *discAux = nullptr;
+		discAux = new ElDisciplina();
 		discAux->setDisciplina(disc);
 
 		if (elDisciplinaPrim == nullptr)
@@ -57,7 +57,7 @@ void ListaDisciplinas::incluaDisciplina(Disciplina* disc)
 }
 void ListaDisciplinas::listarDisciplinasInicio() 
 {
-	ElDisciplina* elDiscAux;
+	ElDisciplina* elDiscAux = nullptr;
 	elDiscAux = elDisciplinaPrim;
 
 	while (elDiscAux != nullptr)						//<-- O ponteiro da ultima disciplina para "ProxDiscp" e nulo 
