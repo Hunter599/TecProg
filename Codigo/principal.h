@@ -8,6 +8,7 @@
 #include "departamento.h"
 #include "universidade.h"
 #include "listaDisciplinas.h"
+#include "listaUniversidades.h"
 
 class Principal{
 
@@ -40,8 +41,10 @@ private:
 	Disciplina IntroLog;
 
 	ListaAlunos ListaAlunos;
-	ListaDisciplinas ListaDisciplinas;
-	ListaDepartamentos ListaDepartamentos;
+	ListaUniversidades ObjLUniversidades, LUniversidades;
+	ListaDisciplinas ListaDisciplinas, LDisciplinas;
+	ListaDepartamentos ListaDepartamentos, LDepartamentos;
+
 	
 	int numero_uni;
 	int cont_uni;
@@ -58,6 +61,7 @@ public:
     ~Principal();
 
     void executar();
+
 	//void inicializaPessoas();
 	void inicializaObjs();
 	void inicializaAlunos();
@@ -70,6 +74,13 @@ public:
 
 	void incluaUniversidade(Universidade* puni);
 	void listeUniversidadesInicio();
-
 	void listeUniversidadesFim();
+
+	void CadDisciplina();
+	void CadDepartamento();
+	void CadUniversidade();
+
+	void Menu();
+	void MenuCad();
+	void MenuExe();
 };

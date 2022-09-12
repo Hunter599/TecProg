@@ -1,4 +1,5 @@
 #include "listaDepartamentos.h"
+#include "elDepartamento.h"
 
 //Eu fiz a numero_deps ser inicializada com valor default 45 passado p/ parâmetro
 ListaDepartamentos::ListaDepartamentos(int n)
@@ -99,4 +100,19 @@ void ListaDepartamentos::setNomeLista(char* n)
 char* ListaDepartamentos::getNomeLista()
 {
 	return nomeListD;
+}
+
+Departamento* ListaDepartamentos::localizar(char* n)
+{
+	elDepartamento* paux;
+	paux = pElDepPrim;
+	while (paux != nullptr)
+	{
+		if (0 == strcmp(n, paux->getNome()))
+		{
+			return paux->getDep();
+		}
+		paux = paux->getProxElDep();
+	}
+	return nullptr;
 }

@@ -2,10 +2,6 @@
 #include "universidade.h"
 #include "listaDisciplinas.h"
 
-
-
-
-
 Departamento::Departamento(char* nd){
     strcpy_s(nomeD, nd);
 	uniD = nullptr;
@@ -13,8 +9,12 @@ Departamento::Departamento(char* nd){
 
 }
 
-Departamento::~Departamento(){
-	
+Departamento::~Departamento()
+{
+	if (pObjListaDisciplinas)
+	{
+		delete pObjListaDisciplinas;
+	}
 }
 
 void Departamento::setNome(char* nd){

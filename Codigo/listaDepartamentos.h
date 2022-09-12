@@ -22,4 +22,5 @@ public:
 	void incluaDep(Departamento* dep);
 	void listeDepsIni();
 	void listeDepsFim();
+	Departamento* localizar(char* n);
 };

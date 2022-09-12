@@ -5,6 +5,7 @@ using std::endl;
 
 #include "principal.h"
 #include "universidade.h"
+#include "elUniversidade.h"
 
 Principal::Principal():
 	Einstein(),
@@ -124,60 +125,21 @@ void Principal::inicializaProfessores()
 
 void Principal::incluaUniversidade(Universidade* puni)
 {
-	if (cont_uni < numero_uni && puni != nullptr)
-	{
-		if (pUniPrim == nullptr)
-		{
-			pUniPrim = puni;
-			pUniAtual = puni;
-		}
-		else
-		{
-			pUniAtual->setProxUni(puni);
-			puni->setAnteUni(pUniAtual);
-			pUniAtual = puni;
-		}
-		cont_uni++;
-	}
-	else if (cont_uni > numero_uni)
-	{
-		cout << "Nao eh possivel adicionar universidade, ha universidades demais!" << endl;
-
-	}
-	else
-	{
-	cout << "Error: ponteiro = NULL" << endl;
-	}
+	ObjLUniversidades.incluaUni(puni);
 }
 
 //Listagem de universidades
 
 void Principal::listeUniversidadesInicio()
 {
-	Universidade* paux;
-	paux = pUniPrim;
-
 	cout << "Universidades :" << endl;
-
-	while (paux != nullptr)
-	{
-		cout << paux->getNome() << endl;
-		paux = paux->getProxUni();
-	}
+	ObjLUniversidades.listeUniIni();
 }
 
 void Principal::listeUniversidadesFim()
 {
-	Universidade* paux;
-	paux = pUniAtual;
-
 	cout << "Universidades :" << endl;
-
-	while (paux != nullptr)
-	{
-		cout << paux->getNome() << endl;
-		paux = paux->getAnteUni();
-	}
+	ObjLUniversidades.listeUniFim();
 }
 
 
@@ -237,6 +199,200 @@ void Principal::calcIdades(int dAtual, int mAtual, int aAtual)
 	Gab.calcIdade(dAtual, mAtual, aAtual);
 }
 
+void Principal::Menu()
+{
+	int opcao = -1;
+
+	while (opcao != 3)
+	{
+		system("cls"); //limpa a tela
+
+		cout << " Informe sua opcao: " << endl;
+		cout << " 1 - Cadastrar. " << endl;
+		cout << " 2 - Executar. " << endl;
+		cout << " 3 - Sair. " << endl;
+		cin >> opcao;
+
+		switch (opcao)
+		{
+			case 1: 
+			{
+				MenuCad();
+			}
+				break;
+
+			case 2:
+			{
+				MenuExe();
+			}
+				break;
+
+			case 3:
+			{
+				cout << " FIM " << endl;
+			}
+				break;
+
+			default:
+			{
+				cout << "Opcao Invalida." << endl;
+				system("Pause");
+			}
+
+		}
+	}
+}
+
+void Principal::MenuCad()
+{
+	int opcao = -1;
+	while (opcao != 4)
+	{
+		system("cls");
+		cout << " Informe sua opcao: " << endl;
+		cout << " 1 - Cadastrar Disciplina. " << endl;
+		cout << " 2 - Cadastrar Departamento. " << endl;
+		cout << " 3 - Cadastrar Universidade. " << endl;
+		cout << " 4 - Voltar. " << endl;
+		cin >> opcao;
+	}
+
+	switch (opcao)
+	{
+	case 1: { CadDisciplina(); }
+		  break;
+	case 2: { CadDepartamento(); }
+		  break;
+	case 3: {CadUniversidade(); }
+		  break;
+	case 4: {cout << "FIM" << endl; }
+		  break;
+	default: {
+		cout << "Opcao invalida." << endl;
+		getchar();
+	}
+
+	}
+}
+
+void Principal::MenuExe()
+{
+	int opcao = -1;
+
+	while (opcao != 4)
+	{
+		system("cls");
+		cout << " Informe sua opcao: " << endl;
+		cout << " 1 - Listar Disciplinas. " << endl;
+		cout << " 2 - Listar Departamentos. " << endl;
+		cout << " 3 - Listar Universidades. " << endl;
+		cout << " 4 - Voltar. " << endl;
+		cin >> opcao;
+
+		switch (opcao)
+		{
+		case 1: 
+		{	
+			ListaDisciplinas.listarDisciplinasInicio();
+			while (getchar() != '\n');
+			getchar();
+		} break;
+		case 2:
+		{
+			ListaDepartamentos.listeDepsIni();
+			while (getchar() != '\n');
+			getchar();
+		} break;
+		case 3:
+		{
+			ObjLUniversidades.listeUniIni();
+			while (getchar() != '\n');
+			getchar();
+		} break;
+		case 4:
+		{
+			cout << "FIM" << endl;
+		} break;
+		default:
+		{
+			cout << "Opcao invalida" << endl;
+			while (getchar() != '\n');
+			getchar();
+		} break;
+		}
+	}
+}
+
+void Principal::CadUniversidade()
+{
+	char nomeUniversidade[150];
+	Universidade* puniv = nullptr;
+
+	cout << "Qual o nome da universidade?" << endl;
+	cin >> nomeUniversidade;
+
+	puniv = new Universidade();
+	puniv->setNome(nomeUniversidade);
+	ObjLUniversidades.incluaUni(puniv);
+}
+
+void Principal::CadDepartamento()
+{
+	char nomeUniversidade[150];
+	char nomeDepartamento[150];
+
+	Universidade* puniv;
+	Departamento* pdep;
+
+	cout << "Qual o nome da universidade do departamento?" << endl;
+	cin >> nomeUniversidade;
+	puniv = ObjLUniversidades.localizar(nomeUniversidade);
+
+	if (puniv != nullptr)
+	{
+		cout << "Qual o nome do departamento?" << endl;
+		cin >> nomeDepartamento;
+		pdep = new Departamento();
+		pdep->setNome(nomeDepartamento);
+		pdep->setUniAfil(puniv);
+		ListaDepartamentos.incluaDep(pdep);
+		puniv->incluaDep(pdep);
+	}
+	else
+	{
+		cout << "Universidade inexistente." << endl;
+	}
+}
+
+void Principal::CadDisciplina()
+{
+	char nomeDepartamento[150];
+	char nomeDisciplina[150];
+
+	Departamento* pdep;
+	Disciplina* pdisc;
+
+	cout << "Qual o nome do departamento da disciplina?" << endl;
+	cin >> nomeDepartamento;
+	pdep = ListaDepartamentos.localizar(nomeDepartamento);
+
+	if (pdep != nullptr)
+	{
+		cout << "Qual o nome da disciplina?" << endl;
+		cin >> nomeDisciplina;
+		pdisc = new Disciplina();
+		pdisc->setDisc(nomeDisciplina);
+		pdisc->setDepAfil(pdep);
+		ListaDisciplinas.incluaDisciplina(pdisc);
+		pdep->incluiDisciplina(pdisc);
+	}
+	else
+	{
+		cout << "Departamento inexistente." << endl;
+	}
+
+}
+
 void Principal::executar(){
 
     cout<< "Digite dia, mes e ano"<< endl;
@@ -284,4 +440,13 @@ void Principal::executar(){
 
 	//Mostra lista de universidades
 	listeUniversidadesInicio();
+
+	cout << endl;
+	cout << "Aperte qualquer botao para ir para o menu." << endl;
+
+	while (getchar() != '\n'); //Solucao alternativa a fflush(stdin) porque fflush(stdin) nao estava funcionando
+
+	getchar();
+
+	Menu();
 }
