@@ -1,4 +1,9 @@
-#pragma once
+//#pragma once
+#ifndef _MINHASTRING_H_
+#define _MINHASTRING_H_
+#include <string.h>
+
+
 
 class minhaString
 {
@@ -6,7 +11,8 @@ private:
 	char *str;
 	int tamanho;
 
-	void setString(const char* s);
+	void setString(const char* s);
+
 public:
 	minhaString(const char* s ="");
 	~minhaString();
@@ -17,9 +23,12 @@ public:
 	void operator = (const char* s);
 	void operator = (MinhaString& s); //<-- referencia escondida
 	bool operator == (MinhaString& s); //<-- referencia escondida
+	minhaString operator += (const minhaString &s);
 	minhaString operator + (const minhaString& s1, const minhaString& s2); //<-- referencia escondida
-
+	
 
 };
 
-ostream& operator<< (ostream& saida, MinhaString& s);
+ostream& operator<< (ostream& saida, MinhaString& s);
+
+#endif

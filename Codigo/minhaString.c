@@ -15,9 +15,23 @@ bool minhaString::operator == (MinhaString& s)
 	}
 }
 
+minhaString operator += (const minhaString &s) 
+{
+	char** temp = &s;
+	*temp = new char[size];
+	strcpy(value, *temp);
+	strcat(value, s.getValue());
+	return temp;
+
+}
+
 minhaString operator + (const minhaString& s1, const minhaString& s2) 
 {
-	
+	minhaString answer;
+	answer += s1;
+	answer += s2;
+	return answer;
+		
 }
 
 ostream &operator<< (ostream &saida, MinhaString& s) 
