@@ -253,7 +253,8 @@ void Principal::MenuCad()
 		cout << " 1 - Cadastrar Disciplina. " << endl;
 		cout << " 2 - Cadastrar Departamento. " << endl;
 		cout << " 3 - Cadastrar Universidade. " << endl;
-		cout << " 4 - Voltar. " << endl;
+		cout << " 4 - Cadastrar Aluno. " << endl;
+		cout << " 5 - Voltar. " << endl;
 		cin >> opcao;
 	}
 
@@ -265,7 +266,9 @@ void Principal::MenuCad()
 		  break;
 	case 3: {CadUniversidade(); }
 		  break;
-	case 4: {cout << "FIM" << endl; }
+	case 4: { /* CadAluno() TERMINAR */}
+			break;
+		case 5: {cout << "FIM" << endl; }
 		  break;
 	default: {
 		cout << "Opcao invalida." << endl;
@@ -286,7 +289,8 @@ void Principal::MenuExe()
 		cout << " 1 - Listar Disciplinas. " << endl;
 		cout << " 2 - Listar Departamentos. " << endl;
 		cout << " 3 - Listar Universidades. " << endl;
-		cout << " 4 - Voltar. " << endl;
+		cout << " 4 - Listar Alunos. " << endl;
+		cout << " 5 - Voltar. " << endl;
 		cin >> opcao;
 
 		switch (opcao)
@@ -310,6 +314,12 @@ void Principal::MenuExe()
 			getchar();
 		} break;
 		case 4:
+		{
+			//TERMINAR 
+			while (getchar() != '\n');
+			getchar();
+		} break;
+		case 5:
 		{
 			cout << "FIM" << endl;
 		} break;

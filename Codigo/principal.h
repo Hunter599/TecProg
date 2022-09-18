@@ -79,6 +79,7 @@ public:
 	void CadDisciplina();
 	void CadDepartamento();
 	void CadUniversidade();
+	void CadAluno();
 
 	void Menu();
 	void MenuCad();
