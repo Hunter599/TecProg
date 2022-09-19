@@ -41,6 +41,7 @@ Elemento<TIPO>::Elemento()
     setNome();
 }
 
+template<class TIPO>
 Elemento<TIPO>::~Elemento()
 {
     pProximo = nullptr;
@@ -49,7 +50,7 @@ Elemento<TIPO>::~Elemento()
     setNome();
 }
 
-
+template<class TIPO>
 void Elemento<TIPO>::setProximo(Elemento<TIPO>* pp)
 {
     if (pp != nullptr)
@@ -59,12 +60,13 @@ void Elemento<TIPO>::setProximo(Elemento<TIPO>* pp)
         cout << "Ponteiro nulo" << endl;
 }
 
+template<class TIPO>
 Elemento<TIPO>* Elemento<TIPO>::getProximo()
 {
     return pProximo;
 }
 
-
+template<class TIPO>
 void Elemento<TIPO>::setAnt(Elemento<TIPO>* pa)
 {
     if (pa != nullptr)
@@ -74,12 +76,13 @@ void Elemento<TIPO>::setAnt(Elemento<TIPO>* pa)
         cout << "Ponteiro nulo" << endl;
 }
 
+template<class TIPO>
 Elemento<TIPO>* Elemento<TIPO>::getAnterior()
 {
     return pAnterior;
 }
 
-
+template<class TIPO>
 void Elemento<TIPO>::setInfo(TIPO* pInf)
 {
     if (pInf != nullptr)
@@ -88,17 +91,20 @@ void Elemento<TIPO>::setInfo(TIPO* pInf)
     } else
         cout << "Ponteiro nulo" << endl;
 }
+
+template<class TIPO>
 TIPO* Elemento<TIPO>::getInfo()
 {
     return pInfo;
 }
 
-
+template<class TIPO>
 void Elemento<TIPO>::setNome(char* n)
 {
     strcpy(nome, n);
 }
 
+template<class TIPO>
 char* Elemento<TIPO>::getNome()
 {
     return nome;
