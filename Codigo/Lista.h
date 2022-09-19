@@ -1,5 +1,6 @@
 #ifndef _LISTA_H_
 #define _LISTA_H_
+#include "Elemento.h"
 template<class TIPO>
 
 
@@ -11,7 +12,6 @@ private:
 public:
 	Lista ( );
 	~Lista ( );
-	void inicializa ( );
 	void limpar();
 	bool incluaElemento ( Elemento<TIPO>* pElemento );
 	bool incluaInfo (TIPO* pInfo );
@@ -65,3 +65,51 @@ void Lista<TIPO>::limpar ( )
 	pPrimeiro = NULL;
 	pAtual = NULL;
 }
+
+template<class TIPO>
+bool Lista<TIPO>::incluaInfo(TIPO *pInfo)
+{
+	if (NULL != pInfo)
+	{
+		Elemento<TIPO>* pElemento = NULL;
+		pElemento = new Elemento<TIPO>();
+		pElemento->setInfo(pInfo);
+		incluaElemento(pElemento);
+		return true;
+	}
+	else
+	{
+		printf("Erro, elemento nulo(a) na lista. \n");
+		return false;
+	}
+}
+
+template<class TIPO>
+bool Lista<TIPO>::incluaElemento(Elemento<TIPO>* pElemento)
+{
+	if (NULL != pElemento)
+	{
+		if (NULL == pPrimeiro)
+		{
+			pPrimeiro = pElemento;
+			// pPrimeiro->setAnterior ( NULL);
+			// pPrimeiro->setProximo ( NULL);
+			pAtual = pPrimeiro;
+		}
+		else
+		{
+			pElemento->setAnterior(pAtual);
+			//pElemento->setProximo ( NULL);
+			pAtual->setProximo(pElemento);
+			pAtual = pAtual->getProximo();
+		}
+		return true;
+	}
+	else
+	{
+		cout << "Erro, elemento nulo na lista." << endl;
+		return false;
+	}
+}
+
+#endif 
