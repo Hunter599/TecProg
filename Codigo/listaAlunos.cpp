@@ -7,42 +7,28 @@ using std::endl;
 
 ListaAlunos::ListaAlunos()
 {
-	strcpy_s(nomeListA, " ");
-	elAlunoAct = nullptr;
-	elAlunoPrim = nullptr;
-
 	contAlunos = 0;
 	nroAlunos = 45;
 }
 
 ListaAlunos::~ListaAlunos()
 {
-	elAluno *pElAlunoAux1, *pElAlunoAux2;
-	pElAlunoAux1 = elAlunoPrim;
-	pElAlunoAux2 = pElAlunoAux1;
-
-	while (pElAlunoAux1 != NULL) 
-	{
-		pElAlunoAux2 = pElAlunoAux1->getProxElAl();
-		delete(pElAlunoAux1);
-		pElAlunoAux1 = pElAlunoAux2;
-	}
+	limpaLista();
 
 
 }
 
-void ListaAlunos::setNomeLista(char* n)
+void ListaAlunos::limpaLista() 
 {
-	strcpy_s(nomeListA, n);
+	lAlunos.limpar();
 }
 
-char* ListaAlunos::getNomeLista() 
-{
-	return nomeListA;
-}
+
 void ListaAlunos::incluaAluno(Aluno* pA)
 {
 	if (contAlunos < nroAlunos && pA != NULL) {
+		lAlunos.incluaInfo(pA);
+		/*
 		elAluno *pAux = NULL;
 		pAux = new elAluno();
 		pAux->setAluno(pA);
@@ -58,7 +44,7 @@ void ListaAlunos::incluaAluno(Aluno* pA)
 			pAux->setAntAl(elAlunoAct);
 			elAlunoAct = pAux;
 		}
-	
+		*/
 	}
 	else if (contAlunos > nroAlunos)
 	{
@@ -72,13 +58,16 @@ void ListaAlunos::incluaAluno(Aluno* pA)
 }
 void ListaAlunos::listarAlunosIn()
 {
-	elAluno* alu = NULL;
-	alu = elAlunoPrim;
+	Elemento<Aluno>* pElAux = NULL;
+	pElAux = lAlunos.getpPrimeiro();
+	
+	Aluno* pAlAux = NULL;
 
-	while (alu != NULL)
+	while (pElAux != NULL)
 	{
-		cout << alu->getNome() << "(" << alu->getAluno()->getRa() << ")" << endl;
-		alu = alu->getProxElAl();
+		pAlAux = pElAux->getInfo();
+		cout << pAlAux->getNome() << "(" << pAlAux->getRa() << ")" << endl;
+		pElAux = pElAux->getProximo();
 	}
 	cout << endl;
 }
@@ -86,21 +75,25 @@ void ListaAlunos::listarAlunosIn()
 	
 void ListaAlunos::listarAlunosFim() 
 {
-	elAluno* alu = NULL;
-	alu = elAlunoAct;
+	Elemento<Aluno>* pElAux = NULL;
+	pElAux = lAlunos.getpAtual();
 
-	while (alu != NULL)
+	Aluno* pAlAux = NULL;
+
+	while (pElAux != NULL)
 	{
-		cout << alu->getNome() << "(" << alu->getAluno()->getRa() << ")" << endl;
-		alu = alu->getAntElAl();
+		pAlAux = pElAux->getInfo();
+		cout << pAlAux->getNome() << "(" << pAlAux->getRa() << ")" << endl;
+		pElAux = pElAux->getAnterior();
 	}
 	cout << endl;
 }
 
 
 
-void ListaAlunos::excluiAluno(elAluno* al)
+void ListaAlunos::excluiAluno(Aluno* pA)
 {
+	/*
 	elAluno* aluProxAux = NULL;
 	elAluno* aluAntAux = NULL;
 
@@ -120,5 +113,5 @@ void ListaAlunos::excluiAluno(elAluno* al)
 	}
 
 	delete(al);
-
+	*/
 }

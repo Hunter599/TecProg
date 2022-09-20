@@ -1,9 +1,8 @@
 #ifndef _LISTA_H_
 #define _LISTA_H_
 #include "Elemento.h"
+
 template<class TIPO>
-
-
 class Lista
 {
 private:
@@ -15,15 +14,17 @@ public:
 	void limpar();
 	bool incluaElemento ( Elemento<TIPO>* pElemento );
 	bool incluaInfo (TIPO* pInfo );
+
+	Elemento<TIPO>* getpPrimeiro();
+	Elemento<TIPO>* getpAtual();
 	
 	//void listeInfos ( ); Nao e possivel generalizar os algoritmos de listagem
 	
-	Elemento<TIPO>* getpPrimeiro();
-	Elemento<TIPO>* getpAtual();
+	
 };
 
 template<class TIPO>
-Lista<TIPO>::Lista ( )
+Lista<TIPO>::Lista()
 {
 	pPrimeiro = NULL;
 	pAtual = NULL;

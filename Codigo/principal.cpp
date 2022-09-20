@@ -145,7 +145,7 @@ void Principal::listeUniversidadesFim()
 
 void Principal::inicializaListas() 
 {
-	ListaAlunos.setNomeLista((char*)"Lista de Alunos");
+	//ListaAlunos.setNomeLista((char*)"Lista de Alunos"); O TEMPLATE LISTA JA NAO POSSUI UM ATRIBUTO PARA NOME
 	ListaDisciplinas.setNomeLista((char*)"Lista de Disciplinas");
 	ListaDepartamentos.setNomeLista((char*)"Lista de Departamentos");
 

@@ -176,7 +176,9 @@
     <ClInclude Include="..\..\Codigo\elAluno.h" />
     <ClInclude Include="..\..\Codigo\elDepartamento.h" />
     <ClInclude Include="..\..\Codigo\elDisciplina.h" />
+    <ClInclude Include="..\..\Codigo\Elemento.h" />
     <ClInclude Include="..\..\Codigo\elUniversidade.h" />
+    <ClInclude Include="..\..\Codigo\Lista.h" />
     <ClInclude Include="..\..\Codigo\listaAlunos.h" />
     <ClInclude Include="..\..\Codigo\listaDepartamentos.h" />
     <ClInclude Include="..\..\Codigo\listaDisciplinas.h" />

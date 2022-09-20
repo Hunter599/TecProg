@@ -2,6 +2,8 @@
 #define _ELEMENTO_H_
 #include <string.h>
 #include <iostream> //OLHAR PARA INCLUSAO RECURSIVA UMA VEZ IMPLEMENTADO
+using std::cout;
+using std::endl;
 
 template<class TIPO>
 
@@ -20,25 +22,25 @@ public:
     void setProximo(Elemento<TIPO>* pp);
     Elemento<TIPO>* getProximo();
     
-    void setAnt(Elemento<TIPO>* pa);
+    void setAnterior(Elemento<TIPO>* pa);
     Elemento<TIPO>* getAnterior();
     
     void setInfo(TIPO* pInf);
     TIPO* getInfo();
     
-    void setNome(char* n = "");
-    char* getNome();
+    void setNome(char* n);
+    char* getNome() const;
     
-}
+};
 
-template <class TIPO>
+template<class TIPO>
 
 Elemento<TIPO>::Elemento()
 {
     pProximo = nullptr;
     pAnterior = nullptr;
-    pInf = nullptr;
-    setNome();
+    pInfo = nullptr;
+    setNome((char*)"");
 }
 
 template<class TIPO>
@@ -46,8 +48,8 @@ Elemento<TIPO>::~Elemento()
 {
     pProximo = nullptr;
     pAnterior = nullptr;
-    pInf = nullptr;
-    setNome();
+    pInfo = nullptr;
+    setNome((char*)"");
 }
 
 template<class TIPO>
@@ -67,7 +69,7 @@ Elemento<TIPO>* Elemento<TIPO>::getProximo()
 }
 
 template<class TIPO>
-void Elemento<TIPO>::setAnt(Elemento<TIPO>* pa)
+void Elemento<TIPO>::setAnterior(Elemento<TIPO>* pa)
 {
     if (pa != nullptr)
     {
@@ -101,11 +103,12 @@ TIPO* Elemento<TIPO>::getInfo()
 template<class TIPO>
 void Elemento<TIPO>::setNome(char* n)
 {
-    strcpy(nome, n);
+    strcpy_s(nome, n);
 }
 
 template<class TIPO>
-char* Elemento<TIPO>::getNome()
+char* Elemento<TIPO>::getNome() const
 {
     return nome;
 }
+#endif 
