@@ -161,6 +161,7 @@
     <ClCompile Include="..\..\Codigo\listaAlunos.cpp" />
     <ClCompile Include="..\..\Codigo\listaDepartamentos.cpp" />
     <ClCompile Include="..\..\Codigo\listaDisciplinas.cpp" />
+    <ClCompile Include="..\..\Codigo\listaPessoas.cpp" />
     <ClCompile Include="..\..\Codigo\listaUniversidades.cpp" />
     <ClCompile Include="..\..\Codigo\main.cpp" />
     <ClCompile Include="..\..\Codigo\pessoa.cpp" />
@@ -182,6 +183,7 @@
     <ClInclude Include="..\..\Codigo\listaAlunos.h" />
     <ClInclude Include="..\..\Codigo\listaDepartamentos.h" />
     <ClInclude Include="..\..\Codigo\listaDisciplinas.h" />
+    <ClInclude Include="..\..\Codigo\listaPessoas.h" />
     <ClInclude Include="..\..\Codigo\listaUniversidades.h" />
     <ClInclude Include="..\..\Codigo\pessoa.h" />
     <ClInclude Include="..\..\Codigo\principal.h" />

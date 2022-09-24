@@ -4,6 +4,7 @@
 
 using std::cout;
 using std::endl;
+using namespace std;
 
 ListaAlunos::ListaAlunos()
 {
@@ -113,5 +114,78 @@ void ListaAlunos::excluiAluno(Aluno* pA)
 	}
 
 	delete(al);
+	*/
+}
+
+void ListaAlunos::graveAlunos() 
+{
+	/*
+	ofstream GravacaoAlunos("alunos.dat", ios::out);
+
+	if (!GravacaoAlunos) 
+	{
+		cerr << "Arquivo não pode ser aberto" << endl;
+		fflush(stdin);
+		fflush(stdin);
+		getchar();
+	}
+	*/
+
+	Elemento<Aluno>* pAuxElAluno = NULL;
+	pAuxElAluno = lAlunos.getpPrimeiro();
+
+	while (pAuxElAluno != NULL) 
+	{
+		Aluno* pAuxAluno;
+		pAuxAluno = pAuxElAluno->getInfo();
+
+		//GravacaoAlunos << pauxAluno->getId() << ' ('
+		// <<pAuxAluno->getRa() << ') ' << pAuxAluno->getNome() << endl;
+
+		pAuxElAluno->getProximo();
+
+	}
+
+	//GravacaoAlunos.close();
+	
+}
+
+void ListaAlunos::recupereAlunos() 
+{
+	/* 
+	ifstream RecuperacaoAlunos("alunos.dat", ios::in);
+
+	if (!RecuperacaoAlunos) 
+	{
+		cerr << "Arquivo não pode ser aberto" << endl;
+		fflush(stdin);
+		fflush(stdin);
+		getchar();
+	}
+
+	limpaLista();
+
+	while (!RecuperacaoAlunos.eof()) 
+	{
+		Aluno* pAuxAluno;
+
+		pAuxAluno = new Aluno();
+		int id;
+		int RA;
+		char nome[150];
+
+		RecuperacaoAlunos >> id >> RA >> nome;
+
+		if (0 != strcmp(nome, " ")) 
+		{
+			pAuxAluno->setId(id);
+			pAuxAluno->setRa(RA);
+			pAuxAluno->setNome(nome);
+
+			incluaAluno(pAuxAluno);
+		}
+	}
+
+	RecuperacaoAlunos.close();
 	*/
 }

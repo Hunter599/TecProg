@@ -66,6 +66,9 @@
     <ClCompile Include="..\..\Codigo\listaUniversidades.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Codigo\listaPessoas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Codigo\aluno.h">
@@ -117,6 +120,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Codigo\Lista.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Codigo\listaPessoas.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

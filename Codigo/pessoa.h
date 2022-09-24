@@ -7,6 +7,7 @@ class Pessoa
 {
     //ATRIBUTOS - ATTRIBUTES
 private:
+	int id;
     int diaP;
     int mesP;
     int anoP;
@@ -24,10 +25,13 @@ public:
 
     void inicializa(int dp, int mp, int ap, char* np= (char*)"");
 
+	void setId(int i);
+
     void calcIdade(int d, int m, int a);
     void showIdade();
     int informaIdade();
-
+	
+	void setNome(char* n);
 	char* getNome();
 
 

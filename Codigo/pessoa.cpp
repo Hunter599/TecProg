@@ -15,8 +15,15 @@ void Pessoa::inicializa(int dp, int mp, int ap,  char* np){
     mesP = mp;
     anoP= ap;
     idade = -1;
+	id = -1;
     strcpy_s(nome,np);
 }
+
+void Pessoa::setId(int i)
+{
+	id = i;
+}
+
 
 Pessoa::Pessoa(int diaNa, int mesNa, int anoNa, char* na)
 {
@@ -53,6 +60,11 @@ int Pessoa::informaIdade()
 void Pessoa::showIdade()
 {
     cout << "A idade de "<< nome << " seria " << idade << " anos"<< endl;
+}
+
+void Pessoa::setNome(char* n) 
+{
+	strcpy_s(nome, n);
 }
 
 char* Pessoa::getNome() 

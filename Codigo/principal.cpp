@@ -246,7 +246,7 @@ void Principal::Menu()
 void Principal::MenuCad()
 {
 	int opcao = -1;
-	while (opcao != 4)
+	while (opcao != 5)
 	{
 		system("cls");
 		cout << " Informe sua opcao: " << endl;
@@ -256,24 +256,27 @@ void Principal::MenuCad()
 		cout << " 4 - Cadastrar Aluno. " << endl;
 		cout << " 5 - Voltar. " << endl;
 		cin >> opcao;
+
+
+		switch (opcao)
+		{
+		case 1: { CadDisciplina(); }
+				break;
+		case 2: { CadDepartamento(); }
+				break;
+		case 3: {CadUniversidade(); }
+				break;
+		case 4: { /* CadAluno() TERMINAR */}
+				break;
+		case 5: {cout << "FIM" << endl; }
+				break;
+		default: {
+			cout << "Opcao invalida." << endl;
+			getchar();
+		}
+
 	}
 
-	switch (opcao)
-	{
-	case 1: { CadDisciplina(); }
-		  break;
-	case 2: { CadDepartamento(); }
-		  break;
-	case 3: {CadUniversidade(); }
-		  break;
-	case 4: { /* CadAluno() TERMINAR */}
-			break;
-		case 5: {cout << "FIM" << endl; }
-		  break;
-	default: {
-		cout << "Opcao invalida." << endl;
-		getchar();
-	}
 
 	}
 }

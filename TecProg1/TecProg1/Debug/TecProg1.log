@@ -1,9 +1,14 @@
-﻿  departamento.cpp
+﻿  aluno.cpp
+  departamento.cpp
   disciplina.cpp
+  elAluno.cpp
   elDisciplina.cpp
   listaAlunos.cpp
   listaDisciplinas.cpp
+  listaPessoas.cpp
   main.cpp
+  pessoa.cpp
   principal.cpp
+  professor.cpp
   Generating Code...
   TecProg1.vcxproj -> C:\Users\bruno\OneDrive\Documents\GitHub\TecProg\TecProg1\Debug\TecProg1.exe
