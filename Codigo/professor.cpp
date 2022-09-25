@@ -25,5 +25,10 @@ char* Professor::trabalhaUni() {
 
 }
 
+void Professor::informaProventos() 
+{
+	cout << getNome() << "tem um salario de: " << salario << " Rs" << endl;
+}
+
 
 

@@ -9,6 +9,7 @@
 #include "universidade.h"
 #include "listaDisciplinas.h"
 #include "listaUniversidades.h"
+#include "listaPessoas.h"
 
 class Principal{
 
@@ -40,7 +41,9 @@ private:
 	Disciplina FisTeo;
 	Disciplina IntroLog;
 
-	ListaAlunos ListaAlunos;
+	ListaAlunos listaAlunos;
+	ListaPessoas listaPessoas;
+	
 	ListaUniversidades ObjLUniversidades, LUniversidades;
 	ListaDisciplinas ListaDisciplinas, LDisciplinas;
 	ListaDepartamentos ListaDepartamentos, LDepartamentos;
@@ -48,6 +51,8 @@ private:
 	
 	int numero_uni;
 	int cont_uni;
+
+	int contId;
 
 	Universidade* pUniPrim;
 	Universidade* pUniAtual;

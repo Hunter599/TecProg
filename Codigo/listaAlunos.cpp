@@ -67,7 +67,7 @@ void ListaAlunos::listarAlunosIn()
 	while (pElAux != NULL)
 	{
 		pAlAux = pElAux->getInfo();
-		cout << pAlAux->getNome() << "(" << pAlAux->getRa() << ")" << endl;
+		cout << pAlAux->getNome() << " (" << pAlAux->getRa() << ") " << endl;
 		pElAux = pElAux->getProximo();
 	}
 	cout << endl;

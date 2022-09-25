@@ -13,6 +13,8 @@ private:
     int anoP;
     int idade;
     char nome[30];
+
+	
   
 	
 
@@ -33,6 +35,8 @@ public:
 	
 	void setNome(char* n);
 	char* getNome();
+
+	virtual void informaProventos() = 0;
 
 
     

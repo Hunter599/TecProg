@@ -18,6 +18,8 @@ public:
 	void setRa(int num);
 	int getRa();
 
+	void informaProventos(); // ELIMINAR QUANDO INCLUIR ESTAGIARIO
+
 	
 
 

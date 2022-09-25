@@ -52,6 +52,77 @@ void ListaPessoas::listarPessoasFim()
 	cout << endl;
 }
 
-void gravePessoas() {}
-void recuperePessoas() {}
+void ListaPessoas::gravePessoas() 
+{
+
+	/*
+	ofstream GravacaoPessoas("pessoas.dat", ios::out);
+
+	if (!GravacaoPessoas)
+	{
+		cerr << "Arquivo não pode ser aberto" << endl;
+		fflush(stdin);
+		fflush(stdin);
+		getchar();
+	}
+	*/
+
+	Elemento<Pessoa>* pAuxElPessoa = NULL;
+	pAuxElPessoa = lsPessoas.getpPrimeiro();
+
+	Pessoa* pAuxPessoa = NULL;
+
+	while (pAuxElPessoa != NULL)
+	{
+		
+		pAuxPessoa = pAuxElPessoa->getInfo();
+
+		//GravacaoPessoas << pAuxPessoa->getId() << ' ' << pAuxPessoa->getNome() << endl;
+
+		pAuxElPessoa->getProximo();
+
+	}
+
+	//GravacaoPessoas.close();
+
+}
+
+
+void ListaPessoas::recuperePessoas() 
+{
+	/*
+	ifstream RecuperacaoPessoas("pessoas.dat", ios::in);
+
+	if (!RecuperacaoPessoas)
+	{
+		cerr << "Arquivo não pode ser aberto" << endl;
+		fflush(stdin);
+		fflush(stdin);
+		getchar();
+	}
+
+	limpaLista();
+
+	while (!RecuperacaoPessoas.eof())
+	{
+		Pessoa* pAuxPessoa;
+
+		pAuxPessoa = new Pessoa();
+		int id;
+		char nome[150];
+
+		RecuperacaoPessoas >> id >> nome;
+
+		if (0 != strcmp(nome, " "))
+		{
+			pAuxPessoa->setId(id);
+			pAuxPessoa->setNome(nome);
+
+			incluaPessoa(pAuxPessoa);
+		}
+	}
+
+	RecuperacaoPessoas.close();
+	*/
+}
 

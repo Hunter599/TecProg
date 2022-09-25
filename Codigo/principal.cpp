@@ -7,7 +7,7 @@ using std::endl;
 #include "universidade.h"
 #include "elUniversidade.h"
 
-Principal::Principal():
+Principal::Principal() :
 	Einstein(),
 	Newton(),
 	Barreto(),
@@ -29,13 +29,14 @@ Principal::Principal():
 	FisicaPrinceton(),
 	DAFIS(),
 	DAINF(),
-	
+
 	TecProg(),
 	FundProg(),
 	FisTeo(),
 	IntroLog(),
 
-	ListaAlunos(),
+	listaAlunos(),
+	listaPessoas(),
 	ListaDisciplinas(),
 	ListaDepartamentos()
 {
@@ -48,6 +49,8 @@ Principal::Principal():
 
 	numero_uni = 45;
 	cont_uni = 0;
+
+	contId = 0;
 
 	Einstein.setUniAfil(&Cambridge);
 	Newton.setUniAfil(&Princeton);
@@ -78,16 +81,55 @@ void Principal::inicializaAlunos()
 {
 	Bruno.inicializa(29, 1, 2003, (char*)"Bruno");
 	Bruno.setRa(001);
+	Bruno.setId(++contId);
+
 	Gab.inicializa(15, 5, 2004, (char*)"Gabi");
 	Gab.setRa(002);
+	Gab.setId(++contId);
+
 	Sam.inicializa(3, 1, 1999, (char*)"Samara");
 	Sam.setRa(003);
+	Sam.setId(++contId);
+
 	Rodrigo.inicializa(6, 9, 2002, (char*)"Rodrigo"); ;
 	Rodrigo.setRa(004);
+	Rodrigo.setId(++contId);
+
 	Lucas.inicializa(9, 8, 2004, (char*)"Lucas");
 	Lucas.setRa(005);
+	Lucas.setId(++contId);
+
 	Leticia.inicializa(18, 5, 2004, (char*)"Leticia");
 	Leticia.setRa(006);
+	Leticia.setId(++contId);
+
+
+	Aluno* pontAluno;
+	Pessoa* pontPessoa;
+
+	pontAluno = &Bruno;
+	pontPessoa = static_cast<Pessoa*>(pontAluno);
+	listaPessoas.incluaPessoa(pontPessoa);
+
+	pontAluno = &Gab;
+	pontPessoa = static_cast<Pessoa*>(pontAluno);
+	listaPessoas.incluaPessoa(pontPessoa);
+
+	pontAluno = &Leticia;
+	pontPessoa = static_cast<Pessoa*>(pontAluno);
+	listaPessoas.incluaPessoa(pontPessoa);
+
+	pontAluno = &Rodrigo;
+	pontPessoa = static_cast<Pessoa*>(pontAluno);
+	listaPessoas.incluaPessoa(pontPessoa);
+
+	pontAluno = &Lucas;
+	pontPessoa = static_cast<Pessoa*>(pontAluno);
+	listaPessoas.incluaPessoa(pontPessoa);
+
+	pontAluno = &Sam;
+	pontPessoa = static_cast<Pessoa*>(pontAluno);
+	listaPessoas.incluaPessoa(pontPessoa);
 }
 
 void Principal::inicializaUniversidades() 
@@ -119,6 +161,18 @@ void Principal::inicializaProfessores()
 {
 	Einstein.inicializa(14, 3, 1879, (char*)"Einstein");
 	Newton.inicializa(4, 1, 1643, (char*)"Newton");
+
+	Pessoa* pontPessoa;
+	Professor* pontProfessor;
+
+	//Inclusao de professores na lista pessoas
+	pontProfessor = &Einstein;
+	pontPessoa = static_cast<Pessoa*> (pontProfessor);
+	listaPessoas.incluaPessoa(pontPessoa);
+
+	pontProfessor = &Newton;
+	pontPessoa = static_cast<Pessoa*> (pontProfessor);
+	listaPessoas.incluaPessoa(pontPessoa);
 }
 
 //Inclusão das universidades na lista
@@ -167,6 +221,15 @@ void Principal::inicializaListas()
 	IntroLog.incluiAluno(&Sam);
 	IntroLog.incluiAluno(&Gab);
 	IntroLog.incluiAluno(&Leticia);
+
+	//Inclusao dos alunos na lista alunos geral
+	listaAlunos.incluaAluno(&Bruno);
+	listaAlunos.incluaAluno(&Leticia);
+	listaAlunos.incluaAluno(&Gab);
+	listaAlunos.incluaAluno(&Sam);
+	listaAlunos.incluaAluno(&Rodrigo);
+	listaAlunos.incluaAluno(&Lucas);
+
 
 	//Inclusão das disciplinas aos departamentos
 	DAFIS.incluiDisciplina(&FisTeo);
@@ -266,7 +329,7 @@ void Principal::MenuCad()
 				break;
 		case 3: {CadUniversidade(); }
 				break;
-		case 4: { /* CadAluno() TERMINAR */}
+		case 4: {CadAluno(); }
 				break;
 		case 5: {cout << "FIM" << endl; }
 				break;
@@ -293,7 +356,8 @@ void Principal::MenuExe()
 		cout << " 2 - Listar Departamentos. " << endl;
 		cout << " 3 - Listar Universidades. " << endl;
 		cout << " 4 - Listar Alunos. " << endl;
-		cout << " 5 - Voltar. " << endl;
+		cout << " 5 - Listar Pessoas. " << endl;
+		cout << " 6 - Voltar. " << endl;
 		cin >> opcao;
 
 		switch (opcao)
@@ -318,11 +382,17 @@ void Principal::MenuExe()
 		} break;
 		case 4:
 		{
-			//TERMINAR 
+			listaAlunos.listarAlunosIn();
 			while (getchar() != '\n');
 			getchar();
 		} break;
 		case 5:
+		{
+			listaPessoas.listarPessoasIn();
+			while (getchar() != '\n');
+			getchar();
+		} break;
+		case 6:
 		{
 			cout << "FIM" << endl;
 		} break;
@@ -404,6 +474,34 @@ void Principal::CadDisciplina()
 		cout << "Departamento inexistente." << endl;
 	}
 
+}
+
+
+void Principal::CadAluno() 
+{
+	char nomeAl[150];
+	int ra;
+	Aluno* pontAluno= NULL;
+	Pessoa* pontPessoa = NULL;
+
+	cout << "Digite o nome do aluno" << endl;
+	cin >> nomeAl;
+
+	cout << "Digite o RA do aluno" << endl;
+	cin >> ra;
+
+	pontAluno = new Aluno();
+	pontAluno->setNome(nomeAl);
+	pontAluno->setRa(ra);
+	pontAluno->setId(++contId);
+
+	listaAlunos.incluaAluno(pontAluno);
+
+	// Logo abaixo a forma moderna de fazer cast
+	pontPessoa = static_cast <Pessoa*> (pontPessoa);
+
+	// Logo abaixo a forma antiga e desaconselhavel de fazer cast
+	// ponteiroPessoa = ( Pessoa* ) ponteiroAluno;	//Inclusao de aluno cadastrado en lista de pessoas	listaPessoas.incluaPessoa(pontPessoa);	
 }
 
 void Principal::executar(){
