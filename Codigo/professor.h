@@ -8,6 +8,8 @@ class Professor : public Pessoa
 private:
 	Universidade *uni;
 	Departamento *dep;
+	int salario;
+
 
 public:
 	Professor(int diaNa, int mesNa, int anoNa, char* na = (char*)"");
@@ -18,4 +20,6 @@ public:
 	void setDepAfil(Departamento *d);
 	char* trabalhaUni();
 	char* trabalhaDep();
+
+	void informaProventos();
 };

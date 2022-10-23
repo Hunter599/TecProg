@@ -22,5 +22,5 @@ public:
 	void setProxAl(elAluno* proxAl);
 	void setAntAl(elAluno* antAl);
 
-	void informaProventos() // ELIMINAR QUANDO INCLUIR ESTAGIARIO
+	
 };
