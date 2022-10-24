@@ -1,13 +1,13 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 
-class ente
+class Ente
 {
 protected:
 	int id;
 public:
-	ente();
-	~ente();
+	Ente();
+	~Ente();
 	virtual void executar() = 0;
 	void imprimir();
 

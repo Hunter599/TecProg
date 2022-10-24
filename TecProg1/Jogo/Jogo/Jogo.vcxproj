@@ -168,10 +168,14 @@ sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
     <ClCompile Include="..\..\..\CODIGO - JOGO\Jogo.cpp" />
     <ClCompile Include="..\..\..\CODIGO - JOGO\JogoTecProg.cpp" />
     <ClCompile Include="Ente.cpp" />
+    <ClCompile Include="Entidade.cpp" />
+    <ClCompile Include="GerenteGrafico.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\CODIGO - JOGO\Jogo.h" />
     <ClInclude Include="Ente.h" />
+    <ClInclude Include="Entidade.h" />
+    <ClInclude Include="GerenteGrafico.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

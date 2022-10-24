@@ -11,7 +11,7 @@ int main()
 
     sf::Texture textura;
 
-    textura.loadFromFile("astronauta.png");
+    textura.loadFromFile("TecProg\astronauta.png");
 
     sf::Texture* pTextura;
 
