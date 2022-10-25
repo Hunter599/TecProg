@@ -1,2 +1,7 @@
-﻿  JogoTecProg.cpp
-  Jogo.vcxproj -> C:\Users\bruno\OneDrive\Documents\GitHub\TecProg\TecProg1\Jogo\Debug\Jogo.exe
+﻿  GerenteGrafico.cpp
+c:\users\bruno\onedrive\documents\github\tecprog\codigo - jogo\gerentegrafico.cpp(29): error C2059: syntax error: '}'
+  Jogo.cpp
+  JogoTecProg.cpp
+c:\users\bruno\onedrive\documents\github\tecprog\codigo - jogo\jogotecprog.cpp(21): error C2664: 'void sf::Shape::setTexture(const sf::Texture *,bool)': cannot convert argument 1 from 'sf::Texture' to 'const sf::Texture *'
+  c:\users\bruno\onedrive\documents\github\tecprog\codigo - jogo\jogotecprog.cpp(21): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+  Generating Code...

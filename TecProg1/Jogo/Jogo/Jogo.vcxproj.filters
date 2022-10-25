@@ -15,34 +15,34 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\CODIGO - JOGO\Ente.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\CODIGO - JOGO\Entidade.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\CODIGO - JOGO\GerenteGrafico.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\CODIGO - JOGO\Jogo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\CODIGO - JOGO\Ente.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\CODIGO - JOGO\Entidade.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\CODIGO - JOGO\GerenteGrafico.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\..\CODIGO - JOGO\Jogo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\CODIGO - JOGO\JogoTecProg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Ente.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Entidade.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GerenteGrafico.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\CODIGO - JOGO\Jogo.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Ente.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Entidade.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GerenteGrafico.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

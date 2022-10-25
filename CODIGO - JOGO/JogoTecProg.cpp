@@ -2,7 +2,8 @@
 //
 
 #include <iostream>
-#include <SFML/Graphics.hpp>
+#include "jogo.h"
+
 
 int main()
 {
@@ -11,7 +12,7 @@ int main()
 
     sf::Texture textura;
 
-    textura.loadFromFile("TecProg\astronauta.png");
+    textura.loadFromFile("astronauta.png");
 
     sf::Texture* pTextura;
 
@@ -47,9 +48,6 @@ int main()
             shape.move(sf::Vector2f(0.f, 0.1f));
         }
 
-        window.clear();
-        window.draw(shape);
-        window.display();
     }
 
     return 0;

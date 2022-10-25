@@ -1,11 +1,15 @@
 #pragma once
-#include <SFML/Graphics.hpp>
+#include "GerenteGrafico.h"
+using Gerenciadores::GerenteGrafico; 
 
 class Jogo
 {
 private:
+	GerenteGrafico pGerenteGraf;
 	
 public:
 	Jogo();
+	~Jogo();
+	void exec();
 };
 

@@ -18,6 +18,19 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\CODIGO - JOGO\Ente.h" />
+    <ClInclude Include="..\..\..\CODIGO - JOGO\Entidade.h" />
+    <ClInclude Include="..\..\..\CODIGO - JOGO\GerenteGrafico.h" />
+    <ClInclude Include="..\..\..\CODIGO - JOGO\Jogo.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\CODIGO - JOGO\Ente.cpp" />
+    <ClCompile Include="..\..\..\CODIGO - JOGO\Entidade.cpp" />
+    <ClCompile Include="..\..\..\CODIGO - JOGO\GerenteGrafico.cpp" />
+    <ClCompile Include="..\..\..\CODIGO - JOGO\Jogo.cpp" />
+    <ClCompile Include="..\..\..\CODIGO - JOGO\JogoTecProg.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{04248885-8BCB-46A6-B105-95C0DD8B251B}</ProjectGuid>
@@ -164,19 +177,6 @@ sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\CODIGO - JOGO\Jogo.cpp" />
-    <ClCompile Include="..\..\..\CODIGO - JOGO\JogoTecProg.cpp" />
-    <ClCompile Include="Ente.cpp" />
-    <ClCompile Include="Entidade.cpp" />
-    <ClCompile Include="GerenteGrafico.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\CODIGO - JOGO\Jogo.h" />
-    <ClInclude Include="Ente.h" />
-    <ClInclude Include="Entidade.h" />
-    <ClInclude Include="GerenteGrafico.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
