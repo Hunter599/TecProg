@@ -5,7 +5,7 @@ using Gerenciadores::GerenteGrafico;
 class Jogo
 {
 private:
-	GerenteGrafico pGerenteGraf;
+	GerenteGrafico* pGerenteGraf;
 	
 public:
 	Jogo();
