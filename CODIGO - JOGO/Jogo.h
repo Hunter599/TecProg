@@ -1,15 +1,18 @@
 #pragma once
-#include "GerenteGrafico.h"
-using Gerenciadores::GerenteGrafico; 
-
+#include <SFML/Graphics.hpp>
+#include "Jogador.h"
+#include "Inimigo.h"
 class Jogo
 {
 private:
-	GerenteGrafico* pGerenteGraf;
 	
+	sf::RenderWindow window;
+	Jogador jogador1;
+	Inimigo ini1;
+
 public:
 	Jogo();
-	~Jogo();
+
 	void exec();
 };
 

@@ -1,29 +1,30 @@
 #include "Jogo.h"
 
-Jogo::Jogo() :
-	pGerenteGraf()
+Jogo::Jogo() : window(sf::VideoMode(1000, 1000), "Jogo")
 {
-	pGerenteGraf = pGerenteGraf->getInstance();
-	
+    jogador1.setWindow(&window);
+    string img1 = "astronauta.png";
+    jogador1.setTextura(img1);
+
+    ini1.setWindow(&window);
+    exec();
 }
 
-Jogo::~Jogo() 
+void Jogo::exec()
 {
-	if (pGerenteGraf != NULL) 
-	{
-		pGerenteGraf->~GerenteGrafico();
-	}
-}
+    while (window.isOpen())
+    {
+        sf::Event event;
+        while (window.pollEvent(event))
+        {
+            if (event.type == sf::Event::Closed)
+                window.close();
+        }
 
-void Jogo::exec() 
-{
-	while (pGerenteGraf->isWindowOpen()) 
-	{
-		pGerenteGraf->updateDeltaTime();
-		pGerenteGraf->clear();
-
-		//UPDATE ALL;
-		
-		pGerenteGraf->display();
-	}
+        jogador1.mover();
+        window.clear();
+        jogador1.desenhar();
+        ini1.desenhar();
+        window.display();
+    }
 }
