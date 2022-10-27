@@ -1,7 +1,24 @@
-﻿  GerenteGrafico.cpp
-c:\users\bruno\onedrive\documents\github\tecprog\codigo - jogo\gerentegrafico.cpp(29): error C2059: syntax error: '}'
+﻿  Coordenadas.cpp
+c1xx : fatal error C1083: Cannot open source file: '..\..\..\CODIGO - JOGO\Coordenadas.cpp': No such file or directory
+  Ente.cpp
+  Entidade.cpp
+c:\users\bruno\onedrive\documents\github\tecprog\codigo - jogo\entidade.h(5): error C2504: 'Ente': base class undefined
+  GerenteGrafico.cpp
+c:\users\bruno\onedrive\documents\github\tecprog\codigo - jogo\gerentegrafico.h(37): error C2039: 'CoordF': is not a member of 'Matematica'
+  c:\users\bruno\onedrive\documents\github\tecprog\codigo - jogo\coordenadas.h(7): note: see declaration of 'Matematica'
+c:\users\bruno\onedrive\documents\github\tecprog\codigo - jogo\gerentegrafico.h(37): error C2061: syntax error: identifier 'CoordF'
+c:\users\bruno\onedrive\documents\github\tecprog\codigo - jogo\gerentegrafico.cpp(92): error C2039: 'CoordF': is not a member of 'Matematica'
+  c:\users\bruno\onedrive\documents\github\tecprog\codigo - jogo\coordenadas.h(7): note: see declaration of 'Matematica'
+c:\users\bruno\onedrive\documents\github\tecprog\codigo - jogo\gerentegrafico.cpp(92): error C2065: 'CoordF': undeclared identifier
+c:\users\bruno\onedrive\documents\github\tecprog\codigo - jogo\gerentegrafico.cpp(92): error C2146: syntax error: missing ')' before identifier 'pos'
+c:\users\bruno\onedrive\documents\github\tecprog\codigo - jogo\gerentegrafico.cpp(93): error C2143: syntax error: missing ';' before '{'
+c:\users\bruno\onedrive\documents\github\tecprog\codigo - jogo\gerentegrafico.cpp(93): error C2447: '{': missing function header (old-style formal list?)
   Jogo.cpp
+c:\users\bruno\onedrive\documents\github\tecprog\codigo - jogo\gerentegrafico.h(37): error C2039: 'CoordF': is not a member of 'Matematica'
+  c:\users\bruno\onedrive\documents\github\tecprog\codigo - jogo\coordenadas.h(7): note: see declaration of 'Matematica'
+c:\users\bruno\onedrive\documents\github\tecprog\codigo - jogo\gerentegrafico.h(37): error C2061: syntax error: identifier 'CoordF'
   JogoTecProg.cpp
-c:\users\bruno\onedrive\documents\github\tecprog\codigo - jogo\jogotecprog.cpp(21): error C2664: 'void sf::Shape::setTexture(const sf::Texture *,bool)': cannot convert argument 1 from 'sf::Texture' to 'const sf::Texture *'
-  c:\users\bruno\onedrive\documents\github\tecprog\codigo - jogo\jogotecprog.cpp(21): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+c:\users\bruno\onedrive\documents\github\tecprog\codigo - jogo\gerentegrafico.h(37): error C2039: 'CoordF': is not a member of 'Matematica'
+  c:\users\bruno\onedrive\documents\github\tecprog\codigo - jogo\coordenadas.h(7): note: see declaration of 'Matematica'
+c:\users\bruno\onedrive\documents\github\tecprog\codigo - jogo\gerentegrafico.h(37): error C2061: syntax error: identifier 'CoordF'
   Generating Code...

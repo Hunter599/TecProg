@@ -1,5 +1,6 @@
 #pragma once
 #include "Ente.h"
+using namespace Entidades;
 
 class Entidade : protected Ente
 {

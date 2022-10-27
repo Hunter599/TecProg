@@ -8,7 +8,7 @@
 #define HEIGHT 720
 #define FRAME_RATE 100
 
-namespace Gerenciadores {
+using namespace Gerenciadores;
 
 	GerenteGrafico* GerenteGrafico::instance = NULL;
 
@@ -89,7 +89,7 @@ namespace Gerenciadores {
 		return window->getSize();
 	}
 
-	void GerenteGrafico::CenterView(Matematica::CoordF pos) 
+	void GerenteGrafico::CenterView(Matematica::Coord pos) 
 	{
 		view.setCenter(sf::Vector2f(pos.x, pos.y));
 		window->setView(view);
