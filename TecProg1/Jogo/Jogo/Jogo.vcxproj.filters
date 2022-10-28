@@ -30,6 +30,12 @@
     <ClInclude Include="..\..\..\CODIGO - JOGO\Coordenadas.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\CODIGO - JOGO\Inimigo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\CODIGO - JOGO\Personagem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\CODIGO - JOGO\Ente.cpp">
@@ -48,6 +54,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\CODIGO - JOGO\Coordenadas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\CODIGO - JOGO\Personagem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -23,7 +23,9 @@
     <ClInclude Include="..\..\..\CODIGO - JOGO\Ente.h" />
     <ClInclude Include="..\..\..\CODIGO - JOGO\Entidade.h" />
     <ClInclude Include="..\..\..\CODIGO - JOGO\GerenteGrafico.h" />
+    <ClInclude Include="..\..\..\CODIGO - JOGO\Inimigo.h" />
     <ClInclude Include="..\..\..\CODIGO - JOGO\Jogo.h" />
+    <ClInclude Include="..\..\..\CODIGO - JOGO\Personagem.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\CODIGO - JOGO\Coordenadas.cpp" />
@@ -32,6 +34,7 @@
     <ClCompile Include="..\..\..\CODIGO - JOGO\GerenteGrafico.cpp" />
     <ClCompile Include="..\..\..\CODIGO - JOGO\Jogo.cpp" />
     <ClCompile Include="..\..\..\CODIGO - JOGO\JogoTecProg.cpp" />
+    <ClCompile Include="..\..\..\CODIGO - JOGO\Personagem.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
