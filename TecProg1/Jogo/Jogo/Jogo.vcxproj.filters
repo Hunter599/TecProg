@@ -30,10 +30,13 @@
     <ClInclude Include="..\..\..\CODIGO - JOGO\Coordenadas.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\CODIGO - JOGO\Inimigo.h">
+    <ClInclude Include="..\..\..\CODIGO - JOGO\Personagem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\CODIGO - JOGO\Personagem.h">
+    <ClInclude Include="..\..\..\CODIGO - JOGO\Jogador.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\CODIGO - JOGO\Inimigo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -53,10 +56,13 @@
     <ClCompile Include="..\..\..\CODIGO - JOGO\JogoTecProg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\CODIGO - JOGO\Coordenadas.cpp">
+    <ClCompile Include="..\..\..\CODIGO - JOGO\Personagem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\CODIGO - JOGO\Personagem.cpp">
+    <ClCompile Include="..\..\..\CODIGO - JOGO\Jogador.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\CODIGO - JOGO\Inimigo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

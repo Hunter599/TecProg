@@ -35,7 +35,7 @@ namespace Gerenciadores {
 
 		sf::Vector2u getWindowSize() const;
 
-		void CenterView(Matematica::Coord pos);
+		void CenterView(Matematica::Coord<int> pos);
 		sf::Texture* loadTexture(const char* path);
 
 		sf::Font* getFont();

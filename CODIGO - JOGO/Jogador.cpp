@@ -2,31 +2,19 @@
 
 Jogador::Jogador()
 {
-    corpo.setSize(sf::Vector2f(100.f, 200.f));
 }
 
 Jogador::~Jogador()
 {
 }
 
-void Jogador::setTextura(string img)
-{
-    sf::Texture textura;
-    corpo.setFillColor(sf::Color::Green);
-
-    textura.loadFromFile(img);
-
-    sf::Texture* pTextura;
-
-    pTextura = &textura;
-
-    corpo.setTexture(pTextura);
-}
 
 void Jogador::executar()
 {
     mover();
 }
+
+
 
 void Jogador::mover()
 {
@@ -47,3 +35,4 @@ void Jogador::mover()
         corpo.move(sf::Vector2f(0.f, 0.1f));
     }
 }
+

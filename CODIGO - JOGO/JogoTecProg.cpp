@@ -6,6 +6,8 @@
 int main()
 {
     Jogo jogo; 
+
+	jogo.exec();
     
     return 0;
 }

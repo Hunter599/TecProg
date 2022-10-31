@@ -5,7 +5,7 @@
 class Jogo
 {
 private:
-	
+	GerenteGrafico* pGerenteGrafico;
 	sf::RenderWindow window;
 	Jogador jogador1;
 	Inimigo ini1;

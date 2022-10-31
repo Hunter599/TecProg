@@ -89,7 +89,7 @@ using namespace Gerenciadores;
 		return window->getSize();
 	}
 
-	void GerenteGrafico::CenterView(Matematica::Coord pos) 
+	void GerenteGrafico::CenterView(Matematica::Coord<int> pos) 
 	{
 		view.setCenter(sf::Vector2f(pos.x, pos.y));
 		window->setView(view);
