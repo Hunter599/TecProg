@@ -3,7 +3,7 @@
 
 namespace Entidades
 {
-    namespace Personagem
+    namespace Personagens
     {
         class Chefao :
             public Inimigo

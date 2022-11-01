@@ -1,6 +1,6 @@
 #include "Inimigo.h"
 
-using namespace Entidades::Personagem;
+using namespace Entidades::Personagens;
 
 Inimigo::Inimigo()
 {

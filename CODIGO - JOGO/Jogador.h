@@ -6,7 +6,7 @@ using namespace std;
 
 namespace Entidades
 {
-    namespace Personagem
+    namespace Personagens
     {
         class Jogador :
             public Personagem

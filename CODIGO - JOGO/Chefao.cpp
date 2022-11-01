@@ -1,2 +1,2 @@
 #include "Chefao.h"
-using namespace Entidades::Personagem;
+using namespace Entidades::Personagens;
