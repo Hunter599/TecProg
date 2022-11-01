@@ -532,7 +532,7 @@
 											"top": 910,
 											"width": 351,
 											"height": 13,
-											"text": "Personagem"
+											"text": "Personagens"
 										},
 										{
 											"_type": "LabelView",
@@ -780,9 +780,9 @@
 											"font": "Arial;13;0",
 											"left": 1408,
 											"top": 1112,
-											"width": 111.97900390625,
+											"width": 114.8798828125,
 											"height": 13,
-											"text": "(from Personagem)"
+											"text": "(from Personagens)"
 										},
 										{
 											"_type": "LabelView",
@@ -2812,9 +2812,9 @@
 											"font": "Arial;13;0",
 											"left": 1080,
 											"top": 392,
-											"width": 111.97900390625,
+											"width": 114.8798828125,
 											"height": 13,
-											"text": "(from Personagem)"
+											"text": "(from Personagens)"
 										},
 										{
 											"_type": "LabelView",
@@ -3416,9 +3416,9 @@
 											"font": "Arial;13;0",
 											"left": 752,
 											"top": 656,
-											"width": 111.97900390625,
+											"width": 114.8798828125,
 											"height": 13,
-											"text": "(from Personagem)"
+											"text": "(from Personagens)"
 										},
 										{
 											"_type": "LabelView",
@@ -5822,9 +5822,9 @@
 											"font": "Arial;13;0",
 											"left": -296,
 											"top": -48,
-											"width": 111.97900390625,
+											"width": 114.8798828125,
 											"height": 13,
-											"text": "(from Personagem)"
+											"text": "(from Personagens)"
 										},
 										{
 											"_type": "LabelView",
@@ -7996,7 +7996,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGD9m313CJYF8Q="
 							},
-							"name": "Personagem",
+							"name": "Personagens",
 							"ownedElements": [
 								{
 									"_type": "UMLClass",
