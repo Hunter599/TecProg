@@ -1,5 +1,7 @@
 #pragma once
-class GerenciadorColisoes
-{
-};
 
+namespace Gerenciadores {
+	class GerenciadorColisoes
+	{
+	};
+}

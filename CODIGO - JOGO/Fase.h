@@ -1,8 +1,10 @@
 #pragma once
 #include "Ente.h"
 
-class Fase :
-    public Ente
+namespace Fases
 {
-};
-
+    class Fase :
+        public Ente
+    {
+    };
+}

@@ -1,7 +1,13 @@
 #pragma once
 #include "Obstaculo.h"
-class Plataforma :
-    public Obstaculo
-{
-};
 
+namespace Entidades
+{
+    namespace Obstaculos
+    {
+        class Plataforma :
+            public Obstaculo
+        {
+        };
+    }
+}

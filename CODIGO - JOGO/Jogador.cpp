@@ -1,5 +1,7 @@
 #include "Jogador.h"
 
+using namespace Entidades::Personagem;
+
 Jogador::Jogador()
 {
 }

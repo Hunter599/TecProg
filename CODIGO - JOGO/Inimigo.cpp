@@ -1,5 +1,7 @@
 #include "Inimigo.h"
 
+using namespace Entidades::Personagem;
+
 Inimigo::Inimigo()
 {
 	corpo.setFillColor(sf::Color::Magenta);

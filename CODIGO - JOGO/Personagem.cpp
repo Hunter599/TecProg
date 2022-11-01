@@ -1,6 +1,6 @@
 #include "Personagem.h"
 
-using namespace Personagem;
+using namespace Entidades::Personagem;
 
 Personagem::Personagem()
 {

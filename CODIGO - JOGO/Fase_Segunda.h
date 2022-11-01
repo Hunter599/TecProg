@@ -1,7 +1,10 @@
 #pragma once
 #include "Fase.h"
-class Fase_Segunda :
-    public Fase
-{
-};
 
+namespace Fases
+{
+    class Fase_Segunda :
+        public Fase
+    {
+    };
+}

@@ -1,7 +1,13 @@
 #pragma once
 #include "Inimigo.h"
-class Chefao :
-    public Inimigo
-{
-};
 
+namespace Entidades
+{
+    namespace Personagem
+    {
+        class Chefao :
+            public Inimigo
+        {
+        };
+    }
+}

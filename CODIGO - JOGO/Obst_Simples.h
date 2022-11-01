@@ -1,7 +1,13 @@
 #pragma once
 #include "Obstaculo.h"
-class Obst_Simples :
-    public Obstaculo
-{
-};
 
+namespace Entidades
+{
+    namespace Obstaculos
+    {
+        class Obst_Simples :
+            public Obstaculo
+        {
+        };
+    }
+}
