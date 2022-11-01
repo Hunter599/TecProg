@@ -1,6 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#include "Coordenadas.h"
+#include "Coord.h"
 #include <map>
 
 using namespace Matematica;

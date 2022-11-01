@@ -1,5 +1,7 @@
 #include "Entidade.h"
 
+using namespace Entidades;
+
 Entidade::Entidade(): corpo(sf::Vector2f(573.f, 1113.f))
 {
 }

@@ -1,12 +1,14 @@
 #pragma once
 #include "Personagem.h"
+
+using namespace Personagem;
+
 class Inimigo :
-    public Personagem
+public Personagem
 {
 private:
 public:
-    Inimigo();
-    ~Inimigo();
-    void executar();
+	Inimigo();
+	~Inimigo();
+	void executar();
 };
-

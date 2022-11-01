@@ -1,5 +1,4 @@
 #include "Ente.h"
-using namespace Entidades;
 
 Ente::Ente()
 {

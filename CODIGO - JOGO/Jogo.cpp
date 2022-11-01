@@ -27,7 +27,7 @@ void Jogo::exec()
 				pGerenteGrafico->closeWindow();
         }
 		
-		jogador1.setTextura("\assets\textures\astronauta.png");
+		//jogador1.setTextura("\assets\textures\astronauta.png");
         jogador1.mover();
 		pGerenteGrafico->clear();
 		jogador1.imprimir();
