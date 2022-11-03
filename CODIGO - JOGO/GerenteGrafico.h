@@ -33,6 +33,7 @@ namespace Gerenciadores {
 		void closeWindow();
 		void handleWindowResize();
 
+		sf::RenderWindow* getWindow() const;
 		sf::Vector2u getWindowSize() const;
 
 		void CenterView(Matematica::Coord<int> pos);

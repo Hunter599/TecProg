@@ -1,12 +1,16 @@
 #pragma once
-#include <SFML/Graphics.hpp>
-#include "Jogador.h"
+//#include "Jogador.h"
+//#include "Inimigo.h"
 #include "Inimigo.h"
+#include "Jogador.h"
+
+using namespace Entidades::Personagens;
+
+
 class Jogo
 {
 private:
 	GerenteGrafico* pGerenteGrafico;
-	sf::RenderWindow window;
 	Jogador jogador1;
 	Inimigo ini1;
 

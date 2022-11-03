@@ -14,6 +14,7 @@ Jogador::~Jogador()
 void Jogador::executar()
 {
     mover();
+	imprimir();
 }
 
 

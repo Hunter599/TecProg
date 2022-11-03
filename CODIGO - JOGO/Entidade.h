@@ -3,10 +3,9 @@
 
 namespace Entidades
 { 
-	class Entidade : protected Ente
+	class Entidade : public Ente
 	{
 	protected:
-		sf::RectangleShape corpo;
 		int y;
 		int x;
 	public:
@@ -14,8 +13,6 @@ namespace Entidades
 		~Entidade();
 		virtual void executar()=0;
 		virtual void imprimir();
-		virtual void setTextura(const char* path);
 
-		sf::RectangleShape* getCorpo();
 	};
 }

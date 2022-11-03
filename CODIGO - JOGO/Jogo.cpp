@@ -1,6 +1,6 @@
 #include "Jogo.h"
 
-Jogo::Jogo() : window(sf::VideoMode(1000, 1000), "Jogo"),
+Jogo::Jogo(): 
 jogador1(),
 pGerenteGrafico()
 
@@ -16,22 +16,26 @@ pGerenteGrafico()
 
 void Jogo::exec() 
 {
+	
 	pGerenteGrafico = pGerenteGrafico->getInstance();
+
+	sf::RenderWindow* wind = pGerenteGrafico->getWindow();
 
     while (pGerenteGrafico->isWindowOpen())
     {
         sf::Event event;
-        while (window.pollEvent(event))
+        while (pGerenteGrafico->getWindow()->pollEvent(event))
         {
 			if (event.type == sf::Event::Closed)
 				pGerenteGrafico->closeWindow();
         }
 		
-		//jogador1.setTextura("\assets\textures\astronauta.png");
-        jogador1.mover();
 		pGerenteGrafico->clear();
-		jogador1.imprimir();
+		jogador1.executar();
+		//jogador1.setTextura("Users\bruno\OneDrive\Documents\GitHub\TecProg\TecProg1\Jogo\assets\textures");
+		ini1.imprimir();
 		pGerenteGrafico->display();
+		
 		//window.clear();
         //jogador1.desenhar();
         //ini1.desenhar();

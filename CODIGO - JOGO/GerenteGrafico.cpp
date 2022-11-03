@@ -44,6 +44,7 @@ using namespace Gerenciadores;
 	}
 
 	float GerenteGrafico::dt = 0;
+	
 
 	void GerenteGrafico::render(sf::RectangleShape* body) 
 	{
@@ -115,6 +116,11 @@ using namespace Gerenciadores;
 		}
 		texturesMap.insert(std::pair<const char*, sf::Texture*>(path, tex));
 		return tex;
+	}
+
+	sf::RenderWindow* GerenteGrafico::getWindow() const 
+	{
+		return this->window;
 	}
 
 	sf::Font* GerenteGrafico::getFont()

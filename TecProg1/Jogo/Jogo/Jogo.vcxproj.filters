@@ -39,6 +39,39 @@
     <ClInclude Include="..\..\..\CODIGO - JOGO\Inimigo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\CODIGO - JOGO\Chefao.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\CODIGO - JOGO\Fase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\CODIGO - JOGO\Fase_Primeira.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\CODIGO - JOGO\Fase_Segunda.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\CODIGO - JOGO\ListaEntidades.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\CODIGO - JOGO\Menu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\CODIGO - JOGO\Plataforma.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\CODIGO - JOGO\Inim_Atira.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\CODIGO - JOGO\Obst_Dano.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GerenteColisoes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\CODIGO - JOGO\Lista.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\CODIGO - JOGO\Ente.cpp">
@@ -63,6 +96,42 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\CODIGO - JOGO\Inimigo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\CODIGO - JOGO\Chefao.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\CODIGO - JOGO\Fase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\CODIGO - JOGO\Fase_Primeira.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\CODIGO - JOGO\Fase_Segunda.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\CODIGO - JOGO\Inim_Atira.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\CODIGO - JOGO\Inim_Simples.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\CODIGO - JOGO\ListaEntidades.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\CODIGO - JOGO\Menu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\CODIGO - JOGO\Obst_Simples.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\CODIGO - JOGO\Plataforma.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\CODIGO - JOGO\Projetil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GerenteColisoes.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

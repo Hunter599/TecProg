@@ -9,6 +9,7 @@ class Ente
 protected:
 	int id;
 	sf::Texture textura;
+	sf::RectangleShape corpo;
 public:
 	Ente();
 	virtual ~Ente();
