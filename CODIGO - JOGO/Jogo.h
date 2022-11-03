@@ -1,18 +1,20 @@
 #pragma once
-//#include "Jogador.h"
 //#include "Inimigo.h"
-#include "Inimigo.h"
 #include "Jogador.h"
+#include "Fase_Primeira.h"
+#include "Fase_Segunda.h"
 
 using namespace Entidades::Personagens;
-
+using namespace Fases;
 
 class Jogo
 {
 private:
 	GerenteGrafico* pGerenteGrafico;
 	Jogador jogador1;
-	Inimigo ini1;
+	//Inimigo ini1;
+	Fase_Primeira fase1;
+	Fase_Segunda fase2;
 
 public:
 	Jogo();

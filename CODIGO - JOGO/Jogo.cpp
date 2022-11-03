@@ -1,4 +1,7 @@
 #include "Jogo.h"
+#include "Fase_Primeira.h"
+
+using namespace Fases;
 
 Jogo::Jogo(): 
 jogador1(),
@@ -32,8 +35,8 @@ void Jogo::exec()
 		
 		pGerenteGrafico->clear();
 		jogador1.executar();
-		//jogador1.setTextura("Users\bruno\OneDrive\Documents\GitHub\TecProg\TecProg1\Jogo\assets\textures");
-		ini1.imprimir();
+		//jogador1.setTextura("C:\Users\letic\Desktop\UTFPR\UTFPR - 2022.2\Técnicas de Programação\JOGO\JogoTecProg\assets\textures\astronauta.png"); 
+		fase1.ini1.imprimir();
 		pGerenteGrafico->display();
 		
 		//window.clear();

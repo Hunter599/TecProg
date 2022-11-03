@@ -6,5 +6,9 @@ namespace Fases
     class Fase_Segunda :
         public Fase
     {
+    private:
+    public:
+        void executar();
+        void imprimir();
     };
 }
