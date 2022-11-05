@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\CODIGO - JOGO\baseInclude.h" />
     <ClInclude Include="..\..\..\CODIGO - JOGO\Chefao.h" />
     <ClInclude Include="..\..\..\CODIGO - JOGO\Coordenadas.h" />
     <ClInclude Include="..\..\..\CODIGO - JOGO\Ente.h" />
@@ -26,6 +27,7 @@
     <ClInclude Include="..\..\..\CODIGO - JOGO\Fase.h" />
     <ClInclude Include="..\..\..\CODIGO - JOGO\Fase_Primeira.h" />
     <ClInclude Include="..\..\..\CODIGO - JOGO\Fase_Segunda.h" />
+    <ClInclude Include="..\..\..\CODIGO - JOGO\GerenteColisoes.h" />
     <ClInclude Include="..\..\..\CODIGO - JOGO\GerenteGrafico.h" />
     <ClInclude Include="..\..\..\CODIGO - JOGO\Inimigo.h" />
     <ClInclude Include="..\..\..\CODIGO - JOGO\Inim_Atira.h" />
@@ -33,11 +35,11 @@
     <ClInclude Include="..\..\..\CODIGO - JOGO\Jogo.h" />
     <ClInclude Include="..\..\..\CODIGO - JOGO\Lista.h" />
     <ClInclude Include="..\..\..\CODIGO - JOGO\ListaEntidades.h" />
+    <ClInclude Include="..\..\..\CODIGO - JOGO\Mapa.h" />
     <ClInclude Include="..\..\..\CODIGO - JOGO\Menu.h" />
     <ClInclude Include="..\..\..\CODIGO - JOGO\Obst_Dano.h" />
     <ClInclude Include="..\..\..\CODIGO - JOGO\Personagem.h" />
     <ClInclude Include="..\..\..\CODIGO - JOGO\Plataforma.h" />
-    <ClInclude Include="GerenteColisoes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\CODIGO - JOGO\Chefao.cpp" />
@@ -46,6 +48,7 @@
     <ClCompile Include="..\..\..\CODIGO - JOGO\Fase.cpp" />
     <ClCompile Include="..\..\..\CODIGO - JOGO\Fase_Primeira.cpp" />
     <ClCompile Include="..\..\..\CODIGO - JOGO\Fase_Segunda.cpp" />
+    <ClCompile Include="..\..\..\CODIGO - JOGO\GerenteColisoes.cpp" />
     <ClCompile Include="..\..\..\CODIGO - JOGO\GerenteGrafico.cpp" />
     <ClCompile Include="..\..\..\CODIGO - JOGO\Inimigo.cpp" />
     <ClCompile Include="..\..\..\CODIGO - JOGO\Inim_Atira.cpp" />
@@ -59,7 +62,6 @@
     <ClCompile Include="..\..\..\CODIGO - JOGO\Personagem.cpp" />
     <ClCompile Include="..\..\..\CODIGO - JOGO\Plataforma.cpp" />
     <ClCompile Include="..\..\..\CODIGO - JOGO\Projetil.cpp" />
-    <ClCompile Include="GerenteColisoes.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

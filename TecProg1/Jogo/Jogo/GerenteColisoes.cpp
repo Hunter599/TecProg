@@ -1,4 +1,6 @@
 #include "GerenteColisoes.h"
+
+
 namespace Gerenciadores {
 	GerenteColisoes::GerenteColisoes()/* Inicializar listas*/ {}
 

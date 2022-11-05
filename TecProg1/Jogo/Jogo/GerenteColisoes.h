@@ -1,4 +1,12 @@
 #pragma once
+
+#ifndef GerenteColisoes_hpp
+#define GerenteColisoes_hpp
+
+#include "Jogador.h"
+
+using namespace Entidades::Personagens;
+
 namespace Gerenciadores {
 	class GerenteColisoes
 	{
@@ -10,6 +18,9 @@ namespace Gerenciadores {
 	public:
 		GerenteColisoes();
 		~GerenteColisoes();
+		void checkCollision();
 	};
 }
+
+#endif // !GerenteColisoes_hpp
 

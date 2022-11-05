@@ -66,10 +66,16 @@
     <ClInclude Include="..\..\..\CODIGO - JOGO\Obst_Dano.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GerenteColisoes.h">
+    <ClInclude Include="..\..\..\CODIGO - JOGO\Lista.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\CODIGO - JOGO\Lista.h">
+    <ClInclude Include="..\..\..\CODIGO - JOGO\baseInclude.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\CODIGO - JOGO\GerenteColisoes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\CODIGO - JOGO\Mapa.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -131,7 +137,7 @@
     <ClCompile Include="..\..\..\CODIGO - JOGO\Projetil.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GerenteColisoes.cpp">
+    <ClCompile Include="..\..\..\CODIGO - JOGO\GerenteColisoes.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
