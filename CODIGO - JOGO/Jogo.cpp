@@ -8,21 +8,14 @@ jogador1(),
 pGerenteGrafico()
 
 {
-    //jogador1.setWindow(&window);
 
-    //string img1 = "astronauta.png";
-    //jogador1.setTextura(img1);
-
-    //ini1.setWindow(&window);
-    //exec();
 }
 
 void Jogo::exec() 
 {
 	
 	pGerenteGrafico = pGerenteGrafico->getInstance();
-
-	sf::RenderWindow* wind = pGerenteGrafico->getWindow();
+	//jogador1.setTextura("..\TecProg1\Jogo\Jogo\astronauta.png");
 
     while (pGerenteGrafico->isWindowOpen())
     {
@@ -34,9 +27,9 @@ void Jogo::exec()
         }
 		
 		pGerenteGrafico->clear();
-		jogador1.executar();
-		//jogador1.setTextura("C:\Users\letic\Desktop\UTFPR\UTFPR - 2022.2\Técnicas de Programação\JOGO\JogoTecProg\assets\textures\astronauta.png"); 
-		fase1.ini1.imprimir();
+		jogador1.executar();	
+		ini1.executar();
+		//fase1.ini1.imprimir();
 		pGerenteGrafico->display();
 		
 		//window.clear();
@@ -45,3 +38,9 @@ void Jogo::exec()
         //window.display();
     }
 }
+
+/*Jogo::~Jogo() 
+{
+	pGerenteGrafico->~GerenteGrafico();
+	jogador1.~Jogador();
+}*/

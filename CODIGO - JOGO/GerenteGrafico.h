@@ -17,13 +17,15 @@ namespace Gerenciadores {
 		static float dt;
 
 		static Gerenciadores::GerenteGrafico* instance;
+		
 
 		GerenteGrafico(); // <--- PUBLIC??
 	public:
 		
 		~GerenteGrafico();
 		
-		static GerenteGrafico* getInstance();
+		static GerenteGrafico* getInstance(); //const?
+		static void deleteInstance();
 
 		void render(sf::RectangleShape* body);
 		void render(sf::Text* text);

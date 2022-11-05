@@ -1,2 +1,3 @@
-﻿  GerenteColisoes.cpp
+﻿  Inimigo.cpp
+c:\users\bruno\onedrive\documents\github\tecprog\codigo - jogo\inimigo.cpp(25): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Jogo.vcxproj -> C:\Users\bruno\OneDrive\Documents\GitHub\TecProg\TecProg1\Jogo\Debug\Jogo.exe

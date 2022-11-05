@@ -36,7 +36,7 @@ source distribution.
 #define LEVEL_H
 
 #include "assets/resources/tinyxml/tinyxml.h"
-#include "Ente.h"
+#include "Entidade.h"
 
 	namespace Entidades {
 		namespace Mapas {

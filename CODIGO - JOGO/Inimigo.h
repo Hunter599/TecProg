@@ -1,5 +1,6 @@
 #pragma once
 #include "Personagem.h"
+#include <stdlib.h>
 
 namespace Entidades
 {
@@ -9,10 +10,13 @@ namespace Entidades
 			public Personagem
 		{
 		private:
+			sf::Clock relogio;  //Auxiliar para moverAleatorio
+			short movAleatorio; //Auxiliar para moverAleatorio
 		public:
 			Inimigo();
 			~Inimigo();
 			void executar();
+			void moveAleatorio();
 		};
 	}
 }

@@ -12,7 +12,7 @@ class Jogo
 private:
 	GerenteGrafico* pGerenteGrafico;
 	Jogador jogador1;
-	//Inimigo ini1;
+	Inimigo ini1;
 	Fase_Primeira fase1;
 	Fase_Segunda fase2;
 

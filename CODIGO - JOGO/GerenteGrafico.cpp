@@ -44,6 +44,16 @@ using namespace Gerenciadores;
 	}
 
 	float GerenteGrafico::dt = 0;
+
+	void GerenteGrafico::deleteInstance() 
+	{
+		if (GerenteGrafico::instance != NULL) 
+		{
+			GerenteGrafico* pAux = GerenteGrafico::getInstance();
+			delete pAux;
+			pAux = NULL;
+		}
+	}
 	
 
 	void GerenteGrafico::render(sf::RectangleShape* body) 
@@ -142,3 +152,4 @@ using namespace Gerenciadores;
 		dt = clock.getElapsedTime().asSeconds();
 		clock.restart();
 	}
+

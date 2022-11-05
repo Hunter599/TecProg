@@ -30,19 +30,17 @@
     <ClInclude Include="..\..\..\CODIGO - JOGO\GerenteColisoes.h" />
     <ClInclude Include="..\..\..\CODIGO - JOGO\GerenteGrafico.h" />
     <ClInclude Include="..\..\..\CODIGO - JOGO\Inimigo.h" />
-    <ClInclude Include="..\..\..\CODIGO - JOGO\Inim_Atira.h" />
+    <ClInclude Include="..\..\..\CODIGO - JOGO\Robo.h" />
     <ClInclude Include="..\..\..\CODIGO - JOGO\Jogador.h" />
     <ClInclude Include="..\..\..\CODIGO - JOGO\Jogo.h" />
     <ClInclude Include="..\..\..\CODIGO - JOGO\Lista.h" />
     <ClInclude Include="..\..\..\CODIGO - JOGO\ListaEntidades.h" />
     <ClInclude Include="..\..\..\CODIGO - JOGO\Mapa.h" />
     <ClInclude Include="..\..\..\CODIGO - JOGO\Menu.h" />
-    <ClInclude Include="..\..\..\CODIGO - JOGO\Obst_Dano.h" />
     <ClInclude Include="..\..\..\CODIGO - JOGO\Personagem.h" />
     <ClInclude Include="..\..\..\CODIGO - JOGO\Plataforma.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\CODIGO - JOGO\Chefao.cpp" />
     <ClCompile Include="..\..\..\CODIGO - JOGO\Ente.cpp" />
     <ClCompile Include="..\..\..\CODIGO - JOGO\Entidade.cpp" />
     <ClCompile Include="..\..\..\CODIGO - JOGO\Fase.cpp" />
@@ -51,17 +49,15 @@
     <ClCompile Include="..\..\..\CODIGO - JOGO\GerenteColisoes.cpp" />
     <ClCompile Include="..\..\..\CODIGO - JOGO\GerenteGrafico.cpp" />
     <ClCompile Include="..\..\..\CODIGO - JOGO\Inimigo.cpp" />
-    <ClCompile Include="..\..\..\CODIGO - JOGO\Inim_Atira.cpp" />
-    <ClCompile Include="..\..\..\CODIGO - JOGO\Inim_Simples.cpp" />
     <ClCompile Include="..\..\..\CODIGO - JOGO\Jogador.cpp" />
     <ClCompile Include="..\..\..\CODIGO - JOGO\Jogo.cpp" />
     <ClCompile Include="..\..\..\CODIGO - JOGO\JogoTecProg.cpp" />
     <ClCompile Include="..\..\..\CODIGO - JOGO\ListaEntidades.cpp" />
     <ClCompile Include="..\..\..\CODIGO - JOGO\Menu.cpp" />
-    <ClCompile Include="..\..\..\CODIGO - JOGO\Obst_Simples.cpp" />
     <ClCompile Include="..\..\..\CODIGO - JOGO\Personagem.cpp" />
     <ClCompile Include="..\..\..\CODIGO - JOGO\Plataforma.cpp" />
     <ClCompile Include="..\..\..\CODIGO - JOGO\Projetil.cpp" />
+    <ClCompile Include="..\..\..\CODIGO - JOGO\Robo.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
