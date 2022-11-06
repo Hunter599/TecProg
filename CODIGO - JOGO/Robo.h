@@ -8,6 +8,10 @@ namespace Entidades
         class Robo :
             public Inimigo
         {
+        public:
+            Robo();
+            ~Robo();
+            void executar();
         };
 
     }

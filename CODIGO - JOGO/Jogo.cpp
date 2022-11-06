@@ -2,13 +2,14 @@
 #include "Fase_Primeira.h"
 
 using namespace Fases;
+using namespace Entidades::Personagens;
 
 Jogo::Jogo(): 
 jogador1(),
 pGerenteGrafico()
 
 {
-
+	Fase_Primeira fase1;
 }
 
 void Jogo::exec() 
@@ -29,6 +30,8 @@ void Jogo::exec()
 		pGerenteGrafico->clear();
 		jogador1.executar();	
 		ini1.executar();
+		fase1.robo1.executar();
+		fase1.alien1.executar();
 		//fase1.ini1.imprimir();
 		pGerenteGrafico->display();
 		

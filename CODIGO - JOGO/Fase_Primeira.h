@@ -1,7 +1,11 @@
 #pragma once
 #include "Fase.h"
+#include "Lista.h"
+#include "ListaEntidades.h"
+#include "Lista.h"
 #include "Inimigo.h"
-
+#include "Robo.h"
+#include "Alienigena.h"
 using namespace Entidades::Personagens;
 
 namespace Fases
@@ -11,7 +15,10 @@ namespace Fases
     {
     private:
     public:
-        Inimigo ini1;
+        Fase_Primeira();
+        ~Fase_Primeira();
+        Robo robo1;
+        Alienigena alien1;
         void executar();
         void imprimir();
     };

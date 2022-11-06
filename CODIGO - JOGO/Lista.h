@@ -1,8 +1,11 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 
+#include <iostream>
+using namespace std;
+
 namespace Listas
-{
+{/*
 	class Lista
 	{
 
@@ -26,7 +29,7 @@ namespace Listas
 					delete elemento;
 				next = prev = nullptr;
 				elemento = nullptr;
-			};
+			}
 			~Elemento()
 			{
 				if (liberar && elemento != nullptr)
@@ -38,7 +41,7 @@ namespace Listas
 			}
 
 
-		};
+		};*/
 		//Fim de elemento
 	/*	void setNext(Elemento* next) { this->next = next; };
 		Elemento* getNext() const { return this->next; };
@@ -64,7 +67,7 @@ protected:
 public:
 	Lista() : pPrimeiro(nullptr), pUltimo(nullptr), tam(0) {}
 	~Lista() { clearAll(); };
-	//Getters and Setters 
+	//Getters and Setters
 
 	const int getTam() const { return this->tam; }
 
@@ -99,7 +102,7 @@ public:
 
 	void remover(Tipo* elemento)
 	{
-		auto itr = this->pPrimeiro; //"auto" pega a clase do elemento 
+		auto itr = this->pPrimeiro; //"auto" pega a clase do elemento
 
 		while (itr != nullptr)
 		{
@@ -175,4 +178,176 @@ public:
 	virtual Tipo* operator[](int index) { return this->get(index); };
 
 	*/
-};
+	//};
+
+//Esse código foi inspirado em "Elemento.h" e "Lista.h" do Grupo de Slides 10 - Parte A/B do sistema acadêmico
+	template<class TL>
+	class Lista
+	{
+	//private:
+		
+		template<class TE> class Elemento
+		{
+		private:
+			Elemento<TE>* pProx;
+			TE* pInfo;
+		public:
+			Elemento();
+			~Elemento();
+
+			void setProx(Elemento<TE>* pP);
+			Elemento<TE>* getProx();
+
+			void setInfo(TE* pI);
+			TE* getInfo();
+		};
+
+		/*template<class TE>
+		Elemento<TE>::Elemento()
+		{
+			pProx = nullptr; pInfo = nullptr;
+		}
+
+		template<class TE>
+		Elemento<TE>::~Elemento()
+		{
+			pProx = nullptr; pInfo = nullptr;
+		}
+
+		template<class TE>
+		void Elemento<TE>::setProx(Elemento<TE>* pP)
+		{
+			pProx = pP;
+		}
+
+		template<class TE>
+		Elemento<TE>* Elemento<TE>::getProx()
+		{
+			return pProx;
+		}
+
+		template<class TE>
+		void Elemento<TE>::setInfo(TE* pI)
+		{
+			pInfo = pI;
+		}
+
+		template<class TE>
+		TE* Elemento<TE>::getInfo()
+		{
+			return pInfo;
+		}*/
+
+	Elemento<TL>* pPrimeiro;
+	Elemento<TL>* pUltimo;
+
+	public:
+
+	Lista();
+	~Lista();
+
+	void limpaLista();
+	void incluaElemento(Elemento<TL>* pElemento);
+	void grave();
+	void recupere();
+	};
+
+	template<class TL>
+	template<class TE>
+	Lista<TL>::Elemento<TE>::Elemento()
+	{
+		pProx = nullptr; pInfo = nullptr;
+	}
+
+	template<class TL>
+	template<class TE>
+	Lista<TL>::Elemento<TE>::~Elemento()
+	{
+		pProx = nullptr; pInfo = nullptr;
+	}
+
+	template<class TL>
+	template<class TE>
+	void Lista<TL>::Elemento<TE>::setProx(Elemento<TE>* pP)
+	{
+		pProx = pP;
+	}
+
+	template<class TL>
+	template<class TE>
+	Lista<TL>::Elemento<TE>* Lista<TL>::Elemento<TE>::getProx()
+	{
+		return pProx;
+	}
+
+	template<class TL>
+	template<class TE>
+	void Lista<TL>::Elemento<TE>::setInfo(TE* pI)
+	{
+		pInfo = pI;
+	}
+
+	template<class TL>
+	template<class TE>
+	TE* Lista<TL>::Elemento<TE>::getInfo()
+	{
+		return pInfo;
+	}
+
+	template<class TL>
+	Lista<TL>::Lista()
+	{
+		pPrimeiro = nullptr; pUltimo = nullptr;
+	}
+
+	template<class TL>
+	Lista<TL>::~Lista()
+	{
+		limpaLista();
+		pPrimeiro = nullptr; pUltimo = nullptr;
+	}
+
+	template<class TL>
+	void Lista<TL>::limpaLista()
+	{
+		Elemento<TL>* paux1;
+		Elemento<TL>* paux2;
+
+		paux1 = pPrimeiro;
+		paux2 = paux1;
+
+		while (paux1 != nullptr)
+		{
+			paux2 = paux1->getProx();
+			delete (paux1);
+			paux1 = paux2;
+		}
+
+		pPrimeiro = nullptr;
+		pUltimo = nullptr;
+	}
+
+	template<class TL>
+	void Lista<TL>::incluaElemento(Elemento<TL>* pElemento)
+	{
+		if (pElemento != nullptr)
+		{
+			if (pPrimeiro == nullptr)
+			{
+				pPrimeiro = pElemento;
+				pPrimeiro->setProx(nullptr);
+				pUltimo = pPrimeiro;
+			}
+			else
+			{
+				pElemento->setProx(nullptr);
+				pUltimo->setProx(pElemento);
+				pUltimo = pUltimo->getProx();
+			}
+		}
+		else
+		{
+			cout << "Erro. Elemento nulo na lista, nao foi posssivel incluir." << endl;
+		}
+	}
+}

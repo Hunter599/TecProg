@@ -1,18 +1,19 @@
 #pragma once
 #include "Jogador.h"
 #include "Inimigo.h"
-
-using namespace Entidades::Personagens;
+#include "ListaEntidades.h"
 
 namespace Fases
 {
     class Fase :
         public Ente
     {
+	public:
+		Listas::ListaEntidades LEnt;
 	protected:
-		Jogador* pJogador1;
+		Entidades::Personagens::Jogador* pJogador1;
 
-		Inimigo* pInimigo1;
+		Entidades::Personagens::Inimigo* pInimigo1;
 	private:
 
     };
