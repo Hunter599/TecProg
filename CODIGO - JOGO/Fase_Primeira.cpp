@@ -5,18 +5,14 @@ using namespace Fases;
 
 Fases::Fase_Primeira::Fase_Primeira()
 {
-	//Falta acabar
-	/*Elemento<Entidade>* pElem = nullptr;
-	Entidade* pEnt = nullptr;
-
 	//sorteia quantos inimigos (entre 3 e 5)
-	for (int i = 0; i < 3 + rand() % 3; i++)
+	int n = 3 + rand() % 3;
+	
+	for (int i = 0; i < n; i++)
 	{
-		pRobo = new Robo;
-		pEnt = static_cast <Entidade*>(pRobo);
-		LEnt.LEs.incluaElemento(pEnt);
+		LEnt.LEs.incluaElemento(dynamic_cast <Entidade*>(new Robo));
 	}
-	*/
+	
 }
 
 Fases::Fase_Primeira::~Fase_Primeira()

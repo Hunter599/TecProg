@@ -247,7 +247,7 @@ public:
 	~Lista();
 
 	void limpaLista();
-	void incluaElemento(Elemento<TL>* pElemento);
+	void incluaElemento(TL* pElemento);
 	void grave();
 	void recupere();
 	};
@@ -328,8 +328,11 @@ public:
 	}
 
 	template<class TL>
-	void Lista<TL>::incluaElemento(Elemento<TL>* pElemento)
+	void Lista<TL>::incluaElemento(TL* pI)
 	{
+		Elemento<TL>* pElemento = new Elemento<TL>();
+		pElemento->setInfo(pI);
+
 		if (pElemento != nullptr)
 		{
 			if (pPrimeiro == nullptr)
