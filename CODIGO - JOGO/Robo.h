@@ -11,7 +11,7 @@ namespace Entidades
         public:
             Robo();
             ~Robo();
-            void executar();
+            //void executar();
         };
 
     }

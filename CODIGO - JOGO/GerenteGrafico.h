@@ -3,7 +3,6 @@
 #include "Coord.h"
 #include <map>
 
-using namespace Matematica;
 
 namespace Gerenciadores {
 	class GerenteGrafico
@@ -38,7 +37,7 @@ namespace Gerenciadores {
 		sf::RenderWindow* getWindow() const;
 		sf::Vector2u getWindowSize() const;
 
-		void CenterView(Matematica::Coord<int> pos);
+		void CenterView(Coord* coord);
 		sf::Texture* loadTexture(const char* path);
 
 		sf::Font* getFont();

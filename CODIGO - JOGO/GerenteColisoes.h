@@ -1,19 +1,20 @@
 #pragma once
-#include "Personagem.h"
+#include "Entidade.h"
+#include <math.h>
 
-using namespace Entidades::Personagens;
+using namespace Entidades;
+namespace Gerenciadores {
+	class GerenteColisoes
+	{
+	private:
 
-class GerenteGrafico
-{
-private:
 
 
+	public:
+		GerenteColisoes();
+		~GerenteColisoes();
 
-public:
-	GerenteGrafico();
-	~GerenteGrafico();
+		void checkCollision(Entidade* ent1, Entidade* ent2);
 
-	void checkCollision();
-
-};
-
+	};
+}

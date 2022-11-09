@@ -8,8 +8,9 @@ class Ente
 {
 protected:
 	int id;
-	sf::Texture textura;
+	sf::Texture* textura;
 	sf::RectangleShape corpo;
+	GerenteGrafico* pGerenteGrafico;
 public:
 	Ente();
 	virtual ~Ente();

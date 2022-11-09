@@ -19,9 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\CODIGO - JOGO\Alienigena.h" />
     <ClInclude Include="..\..\..\CODIGO - JOGO\baseInclude.h" />
     <ClInclude Include="..\..\..\CODIGO - JOGO\Chefao.h" />
-    <ClInclude Include="..\..\..\CODIGO - JOGO\Coordenadas.h" />
+    <ClInclude Include="..\..\..\CODIGO - JOGO\Coord.h" />
     <ClInclude Include="..\..\..\CODIGO - JOGO\Ente.h" />
     <ClInclude Include="..\..\..\CODIGO - JOGO\Entidade.h" />
     <ClInclude Include="..\..\..\CODIGO - JOGO\Fase.h" />
@@ -41,6 +42,8 @@
     <ClInclude Include="..\..\..\CODIGO - JOGO\Plataforma.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\CODIGO - JOGO\Alienigena.cpp" />
+    <ClCompile Include="..\..\..\CODIGO - JOGO\Coord.cpp" />
     <ClCompile Include="..\..\..\CODIGO - JOGO\Ente.cpp" />
     <ClCompile Include="..\..\..\CODIGO - JOGO\Entidade.cpp" />
     <ClCompile Include="..\..\..\CODIGO - JOGO\Fase.cpp" />

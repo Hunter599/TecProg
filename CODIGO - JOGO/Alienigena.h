@@ -11,7 +11,7 @@ namespace Entidades
         public:
             Alienigena();
             ~Alienigena();
-            void executar();
+            //void executar();
         };
     }
 }

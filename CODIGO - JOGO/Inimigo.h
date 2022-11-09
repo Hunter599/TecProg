@@ -15,7 +15,7 @@ namespace Entidades
 		public:
 			Inimigo();
 			~Inimigo();
-			void executar();
+			virtual void executar();
 			void moveAleatorio();
 		};
 	}

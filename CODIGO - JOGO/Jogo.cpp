@@ -16,7 +16,7 @@ void Jogo::exec()
 {
 	
 	pGerenteGrafico = pGerenteGrafico->getInstance();
-	//jogador1.setTextura("..\TecProg1\Jogo\Jogo\astronauta.png");
+	jogador1.setTextura("astronauta.png");
 
     while (pGerenteGrafico->isWindowOpen())
     {
@@ -31,9 +31,17 @@ void Jogo::exec()
 		jogador1.executar();	
 		ini1.executar();
 		fase1.robo1.executar();
+
+		//TESTE
+		Robo* rob = &fase1.robo1;
+		Ger.checkCollision(&jogador1, rob);
+		//TESTE
+
 		fase1.alien1.executar();
+		
 		//fase1.ini1.imprimir();
 		pGerenteGrafico->display();
+		
 		
 		//window.clear();
         //jogador1.desenhar();

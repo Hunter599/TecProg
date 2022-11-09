@@ -1,7 +1,9 @@
 #include "Ente.h"
 
-Ente::Ente(): corpo(sf::Vector2f(100.f, 100.f))
+Ente::Ente() : corpo(sf::Vector2f(100.f, 100.f)),
+pGerenteGrafico()
 {
+	pGerenteGrafico = GerenteGrafico::getInstance();
 }
 
 Ente::~Ente()
@@ -14,6 +16,6 @@ Ente::~Ente()
 
 void Ente::setTextura(const char* path) 
 {
-	GerenteGrafico* gerente = gerente->getInstance();
-	gerente->loadTexture(path);
+	this->textura = pGerenteGrafico->loadTexture(path);
+	this->corpo.setTexture(textura);
 }

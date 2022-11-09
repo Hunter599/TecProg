@@ -11,7 +11,7 @@ Entidades::Personagens::Alienigena::~Alienigena()
 {
 }
 
-void Entidades::Personagens::Alienigena::executar()
+/*void Entidades::Personagens::Alienigena::executar()
 {
 	Alienigena::imprimir();
-}
+}*/

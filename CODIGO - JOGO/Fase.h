@@ -3,6 +3,7 @@
 #include "Inimigo.h"
 #include "ListaEntidades.h"
 
+
 namespace Fases
 {
     class Fase :
@@ -14,7 +15,10 @@ namespace Fases
 		Entidades::Personagens::Jogador* pJogador1;
 
 		Entidades::Personagens::Inimigo* pInimigo1;
-	private:
+	public:
+		Fase();
+		~Fase();
+		virtual void executar() = 0;
 
     };
 }

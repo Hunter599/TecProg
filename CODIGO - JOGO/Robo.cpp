@@ -11,7 +11,7 @@ Entidades::Personagens::Robo::~Robo()
 {
 }
 
-void Entidades::Personagens::Robo::executar()
+/*void Entidades::Personagens::Robo::executar()
 {
 	Robo::imprimir();
-}
+}*/
