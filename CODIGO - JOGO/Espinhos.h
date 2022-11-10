@@ -10,7 +10,6 @@ namespace Entidades
         {
             Espinhos();
             ~Espinhos();
-            void executar();
         };
     }
 }

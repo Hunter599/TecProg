@@ -8,6 +8,10 @@ namespace Entidades
         class Obstaculo :
             public Entidade
         {
+        public:
+            Obstaculo();
+            ~Obstaculo();
+            virtual void executar();
         };
     }
 }

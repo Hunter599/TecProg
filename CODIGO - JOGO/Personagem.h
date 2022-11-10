@@ -13,6 +13,7 @@ namespace Entidades
         public:
             Personagem();
             ~Personagem();
+            virtual void executar();
         };
     }
 }

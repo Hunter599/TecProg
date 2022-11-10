@@ -27,10 +27,10 @@ void Jogo::exec()
 				pGerenteGrafico->closeWindow();
         }
 		
+		fase1.executar();
 		pGerenteGrafico->clear();
-		jogador1.executar();	
-		ini1.executar();
-		fase1.robo1.executar();
+		
+		execEnt();
 
 		//TESTE
 		Robo* rob = &fase1.robo1;
@@ -48,6 +48,16 @@ void Jogo::exec()
         //ini1.desenhar();
         //window.display();
     }
+}
+
+void Jogo::execEnt()
+{
+	jogador1.executar();
+	ini1.executar();
+	//fase1.espi1.executar();
+	fase1.rocha1.executar();
+	fase1.robo1.executar();
+	fase1.chao.executar();
 }
 
 /*Jogo::~Jogo() 

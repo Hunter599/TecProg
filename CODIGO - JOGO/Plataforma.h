@@ -8,6 +8,9 @@ namespace Entidades
         class Plataforma :
             public Obstaculo
         {
+        public:
+            Plataforma();
+            ~Plataforma();
         };
     }
 }

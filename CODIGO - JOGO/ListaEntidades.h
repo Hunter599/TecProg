@@ -10,5 +10,6 @@ namespace Listas
 	{
 	public:
 		Lista<Entidade> LEs;
+		//void executarEntidades();
 	};
 }

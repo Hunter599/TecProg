@@ -5,8 +5,12 @@
 #include "Lista.h"
 #include "Inimigo.h"
 #include "Robo.h"
+#include "Rocha.h"
 #include "Alienigena.h"
+#include "Plataforma.h"
+#include "Espinhos.h"
 using namespace Entidades::Personagens;
+using namespace Entidades::Obstaculos;
 
 namespace Fases
 {
@@ -19,6 +23,10 @@ namespace Fases
         ~Fase_Primeira();
         Robo robo1;
         Alienigena alien1;
+        Rocha rocha1;
+        //Espinhos espi1;
+        Plataforma chao;
+
         void executar();
         void imprimir();
     };

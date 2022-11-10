@@ -8,6 +8,9 @@ namespace Entidades
         class Rocha :
             public Obstaculo
         {
+        public:
+            Rocha();
+            ~Rocha();
         };
     }
 }

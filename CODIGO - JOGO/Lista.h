@@ -184,8 +184,7 @@ public:
 	template<class TL>
 	class Lista
 	{
-	//private:
-		
+			
 		template<class TE> class Elemento
 		{
 		private:
@@ -202,42 +201,6 @@ public:
 			TE* getInfo();
 		};
 
-		/*template<class TE>
-		Elemento<TE>::Elemento()
-		{
-			pProx = nullptr; pInfo = nullptr;
-		}
-
-		template<class TE>
-		Elemento<TE>::~Elemento()
-		{
-			pProx = nullptr; pInfo = nullptr;
-		}
-
-		template<class TE>
-		void Elemento<TE>::setProx(Elemento<TE>* pP)
-		{
-			pProx = pP;
-		}
-
-		template<class TE>
-		Elemento<TE>* Elemento<TE>::getProx()
-		{
-			return pProx;
-		}
-
-		template<class TE>
-		void Elemento<TE>::setInfo(TE* pI)
-		{
-			pInfo = pI;
-		}
-
-		template<class TE>
-		TE* Elemento<TE>::getInfo()
-		{
-			return pInfo;
-		}*/
-
 	Elemento<TL>* pPrimeiro;
 	Elemento<TL>* pUltimo;
 
@@ -248,6 +211,7 @@ public:
 
 	void limpaLista();
 	void incluaElemento(TL* pElemento);
+	void executarTodos();
 	void grave();
 	void recupere();
 	};
@@ -332,7 +296,7 @@ public:
 	{
 		Elemento<TL>* pElemento = new Elemento<TL>();
 		pElemento->setInfo(pI);
-
+		
 		if (pElemento != nullptr)
 		{
 			if (pPrimeiro == nullptr)
@@ -347,10 +311,29 @@ public:
 				pUltimo->setProx(pElemento);
 				pUltimo = pUltimo->getProx();
 			}
+
+			cout << "Elemento incluido." << endl;
 		}
 		else
 		{
 			cout << "Erro. Elemento nulo na lista, nao foi posssivel incluir." << endl;
 		}
 	}
+
+	template<class TL>
+	void Lista<TL>::executarTodos()
+	{
+		Elemento<TL>* paux;
+		paux = pPrimeiro;
+		
+		if (pPrimeiro != nullptr)
+		{
+			while (paux != nullptr)
+			{	
+				paux->getInfo()->executar();
+				paux = paux->getProx();
+			}
+		}
+	}
+
 }

@@ -2,10 +2,15 @@
 
 using namespace Entidades::Personagens;
 
-Personagem::Personagem()
+Personagem::Personagem(): num_vidas(0)
 {
 }
 
 Personagem::~Personagem()
 {
+}
+
+void Entidades::Personagens::Personagem::executar()
+{
+	imprimir();
 }
