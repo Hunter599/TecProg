@@ -3,9 +3,9 @@ using namespace Entidades::Obstaculos;
 
 Entidades::Obstaculos::Espinhos::Espinhos()
 {
-	//corpo.setFillColor(sf::Color::Yellow);
-	//corpo.setSize(sf::Vector2f(100.f, 100.f));
-	//corpo.setPosition(sf::Vector2f(-400.f, 200.f));
+	corpo.setSize(sf::Vector2f(100.f, 100.f));
+	corpo.setPosition(sf::Vector2f(-400.f, 200.f));
+	setTextura("espinhos.png");
 }
 
 Entidades::Obstaculos::Espinhos::~Espinhos()

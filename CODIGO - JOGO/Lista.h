@@ -302,14 +302,14 @@ public:
 			if (pPrimeiro == nullptr)
 			{
 				pPrimeiro = pElemento;
-				pPrimeiro->setProx(nullptr);
+				//pPrimeiro->setProx(nullptr);
 				pUltimo = pPrimeiro;
 			}
 			else
 			{
-				pElemento->setProx(nullptr);
+				//pElemento->setProx(nullptr);
 				pUltimo->setProx(pElemento);
-				pUltimo = pUltimo->getProx();
+				pUltimo = pElemento;
 			}
 
 			cout << "Elemento incluido." << endl;
@@ -330,7 +330,8 @@ public:
 		{
 			while (paux != nullptr)
 			{	
-				paux->getInfo()->executar();
+				//paux->getInfo()->imprimir();
+				//paux->getInfo()->executar();
 				paux = paux->getProx();
 			}
 		}

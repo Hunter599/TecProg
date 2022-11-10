@@ -2,8 +2,6 @@
 #include <SFML/Graphics.hpp>
 #include "Coord.h"
 #include <map>
-#include <cstring>
-#include <iostream>
 
 
 namespace Gerenciadores {

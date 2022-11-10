@@ -10,6 +10,7 @@ namespace Entidades
 			public Personagem
 		{
 		private:
+			float dt;
 			sf::Clock relogio;  //Auxiliar para moverAleatorio
 			short movAleatorio; //Auxiliar para moverAleatorio
 		public:

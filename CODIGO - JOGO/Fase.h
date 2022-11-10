@@ -7,9 +7,9 @@
 
 namespace Fases
 {
-	class Fase :
-		public Ente
-	{
+    class Fase :
+        public Ente
+    {
 	public:
 		Listas::ListaEntidades LEnt;
 	protected:
@@ -24,5 +24,5 @@ namespace Fases
 		void criaRobos();
 		void criaObstaculos();
 
-	};
+    };
 }

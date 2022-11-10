@@ -9,21 +9,13 @@ jogador1(),
 pGerenteGrafico()
 
 {
-	Fase_Primeira fase1;
 }
 
 void Jogo::exec() 
 {
 	
 	pGerenteGrafico = pGerenteGrafico->getInstance();
-	jogador1.setTextura("astronauta.png");
-	//TESTE
-	fase1.setSize(pGerenteGrafico->getWindowSize().x, pGerenteGrafico->getWindowSize().y);
-	
-	fase1.setTextura("backtest2.png");
-	
 
-	//TESTE
     while (pGerenteGrafico->isWindowOpen())
     {
         sf::Event event;
@@ -32,26 +24,18 @@ void Jogo::exec()
 			if (event.type == sf::Event::Closed)
 				pGerenteGrafico->closeWindow();
         }
-
 		
 		fase1.executar();
 		pGerenteGrafico->clear();
-
 		
 		execEnt();
 
-		fase1.imprimir();
-		jogador1.executar();	
-		ini1.executar();
-		fase1.robo1.executar();
-
-
 		//TESTE
-		Robo* rob = &fase1.robo1;
+		//Robo* rob = &fase1.robo1;
+		//Ger.checkCollision(&jogador1, rob);
+		//TESTE
+
 		
-		//TESTE
-
-		fase1.alien1.executar();
 		
 		//fase1.ini1.imprimir();
 		pGerenteGrafico->display();
@@ -67,9 +51,10 @@ void Jogo::exec()
 void Jogo::execEnt()
 {
 	jogador1.executar();
-	ini1.executar();
-	//fase1.espi1.executar();
+	//ini1.executar();
+	fase1.espi1.executar();
 	fase1.rocha1.executar();
+	fase1.alien1.executar();
 	fase1.robo1.executar();
 	fase1.chao.executar();
 }

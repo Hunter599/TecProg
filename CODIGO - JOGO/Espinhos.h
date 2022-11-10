@@ -8,6 +8,7 @@ namespace Entidades
         class Espinhos :
             public Obstaculo
         {
+        public:
             Espinhos();
             ~Espinhos();
         };

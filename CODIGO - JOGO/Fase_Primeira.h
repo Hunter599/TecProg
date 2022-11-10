@@ -24,7 +24,7 @@ namespace Fases
         Robo robo1;
         Alienigena alien1;
         Rocha rocha1;
-        //Espinhos espi1;
+        Espinhos espi1;
         Plataforma chao;
 
         void executar();
