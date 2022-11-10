@@ -19,8 +19,8 @@ namespace Gerenciadores {
 		Coord* tam1 = ent1->getTam();
 		Coord* tam2 = ent2->getTam();
 
-		float dx = abs((coord1->x + (tam1->x / 2)) - (coord2->x + (tam2->x / 2)) - (tam1->x + tam2->x));
-		float dy = abs((coord1->y + (tam1->y / 2)) - (coord2->y + (tam2->y / 2)) - (tam1->y + tam2->y));
+		float dx = abs((coord1->getX() + (tam1->getX() / 2)) - (coord2->getX() + (tam2->getX() / 2)) - (tam1->getX() + tam2->getX()));
+		float dy = abs((coord1->getY() + (tam1->getY() / 2)) - (coord2->getY() + (tam2->getY() / 2)) - (tam1->getY() + tam2->getY()));
 
 		if (dx < 0.0 || dy < 0.0) 
 		{

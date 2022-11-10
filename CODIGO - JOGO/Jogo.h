@@ -20,7 +20,6 @@ private:
 
 public:
 	Jogo();
-
 	void exec();
 	void execEnt();
 };

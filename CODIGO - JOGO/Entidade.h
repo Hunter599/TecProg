@@ -17,6 +17,6 @@ namespace Entidades
 		virtual void imprimir();
 		Coord* getCoord();  //const???
 		Coord* getTam();
-
+		//SET COORD UND SET TAM
 	};
 }

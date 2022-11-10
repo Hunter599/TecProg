@@ -33,11 +33,11 @@ void Inimigo::moveAleatorio()
 	if (movAleatorio == 1) 
 	{
 		corpo.move(sf::Vector2f(0.1f, 0.f));
-		coordenada.x += 0.1;
+		coordenada.addX(0.1);
 	}
 	else 
 	{
 		corpo.move(sf::Vector2f(-0.1f, 0.f));
-		coordenada.x -= 0.1;
+		coordenada.addX(-0.1);
 	}
 }

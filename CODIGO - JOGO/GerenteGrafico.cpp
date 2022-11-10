@@ -1,7 +1,6 @@
 #include "GerenteGrafico.h"
 
-#include <cstring>
-#include <iostream>
+
 
 #define FONT_PATH "		" //<-- PEGAR UMA FONTE
 #define WIDTH 1200
@@ -102,7 +101,7 @@ using namespace Gerenciadores;
 
 	void GerenteGrafico::CenterView(Coord* coord) 
 	{
-		view.setCenter(sf::Vector2f(coord->x, coord->y));
+		view.setCenter(sf::Vector2f(coord->getX(), coord->getY()));
 		window->setView(view);
 	}
 

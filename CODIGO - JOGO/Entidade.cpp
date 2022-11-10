@@ -5,10 +5,8 @@ using namespace Entidades;
 Entidade::Entidade(): coordenada(),
 tam()
 {
-	coordenada.x = corpo.getPosition().x;
-	coordenada.y = corpo.getPosition().y;
-	tam.x = corpo.getSize().x;
-	tam.y = corpo.getSize().y;
+	coordenada.setVal(corpo.getPosition().x, corpo.getPosition().y);
+	tam.setVal(corpo.getSize().x, corpo.getSize().y);
 
 }
 

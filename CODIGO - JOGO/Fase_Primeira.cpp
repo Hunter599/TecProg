@@ -8,6 +8,8 @@ using namespace std;
 namespace Fases {
 	Fase_Primeira::Fase_Primeira()
 	{
+		
+		Fase_Primeira::corpo.setPosition(-700.0,-500.0);
 		//sorteia quantos inimigos (entre 3 e 5)
 		
 		int n = 1;
@@ -21,16 +23,17 @@ namespace Fases {
 
 	}
 
-	Fases::Fase_Primeira::~Fase_Primeira()
+	Fase_Primeira::~Fase_Primeira()
 	{
 	}
 
-	void Fases::Fase_Primeira::executar()
+	void Fase_Primeira::executar()
 	{
 		LEnt.LEs.executarTodos();
 	}
-
-	void Fases::Fase_Primeira::imprimir()
+	//ENTE JA TEM UMA FUNCAO IMPRIMIR -- REMOVER O COMENTARIO SE FAZ IMPRIMIR NA FASE
+	void Fase_Primeira::imprimir()
 	{
+		pGerenteGrafico->render(&corpo);
 	}
 }

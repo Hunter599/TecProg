@@ -1,6 +1,12 @@
-﻿  Jogador.cpp
-c:\users\bruno\onedrive\documents\github\tecprog\codigo - jogo\jogador.cpp(29): warning C4305: '+=': truncation from 'double' to 'float'
-c:\users\bruno\onedrive\documents\github\tecprog\codigo - jogo\jogador.cpp(34): warning C4305: '-=': truncation from 'double' to 'float'
-c:\users\bruno\onedrive\documents\github\tecprog\codigo - jogo\jogador.cpp(39): warning C4305: '+=': truncation from 'double' to 'float'
-c:\users\bruno\onedrive\documents\github\tecprog\codigo - jogo\jogador.cpp(45): warning C4305: '-=': truncation from 'double' to 'float'
-  Jogo.vcxproj -> C:\Users\bruno\OneDrive\Documents\GitHub\TecProg\TecProg1\Jogo\Debug\Jogo.exe
+﻿  Jogo.cpp
+c:\users\bruno\onedrive\documents\github\tecprog\codigo - jogo\jogo.cpp(21): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+Fase_Primeira.obj : error LNK2019: unresolved external symbol "public: __thiscall Entidades::Obstaculos::Rocha::Rocha(void)" (??0Rocha@Obstaculos@Entidades@@QAE@XZ) referenced in function "public: __thiscall Fases::Fase_Primeira::Fase_Primeira(void)" (??0Fase_Primeira@Fases@@QAE@XZ)
+Fase_Primeira.obj : error LNK2019: unresolved external symbol "public: virtual __thiscall Entidades::Obstaculos::Rocha::~Rocha(void)" (??1Rocha@Obstaculos@Entidades@@UAE@XZ) referenced in function __unwindfunclet$??0Fase_Primeira@Fases@@QAE@XZ$3
+Plataforma.obj : error LNK2019: unresolved external symbol "public: __thiscall Entidades::Obstaculos::Obstaculo::Obstaculo(void)" (??0Obstaculo@Obstaculos@Entidades@@QAE@XZ) referenced in function "public: __thiscall Entidades::Obstaculos::Plataforma::Plataforma(void)" (??0Plataforma@Obstaculos@Entidades@@QAE@XZ)
+Plataforma.obj : error LNK2019: unresolved external symbol "public: virtual __thiscall Entidades::Obstaculos::Obstaculo::~Obstaculo(void)" (??1Obstaculo@Obstaculos@Entidades@@UAE@XZ) referenced in function __unwindfunclet$??0Plataforma@Obstaculos@Entidades@@QAE@XZ$0
+Plataforma.obj : error LNK2001: unresolved external symbol "public: virtual void __thiscall Entidades::Obstaculos::Obstaculo::executar(void)" (?executar@Obstaculo@Obstaculos@Entidades@@UAEXXZ)
+C:\Users\bruno\OneDrive\Documents\GitHub\TecProg\TecProg1\Jogo\Debug\Jogo.exe : fatal error LNK1120: 5 unresolved externals
